@@ -6,4 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".EventDetailsActivity">
 
+    <TextView
+        android:id="@+id/textViewEDEventName"
+        android:layout_width="182dp"
+        android:layout_height="34dp"
+        android:text="Event Name"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="48dp" />
+
+    <TextView
+        android:id="@+id/textViewEDDetailsBox"
+        android:layout_width="353dp"
+        android:layout_height="125dp"
+        android:text="Details Box Blah Blah"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="173dp" />
+
+    <TextView
+        android:id="@+id/textViewEDLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location"
+        tools:layout_editor_absoluteX="123dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/textViewEDTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        tools:layout_editor_absoluteX="79dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/textViewEDDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:id="@+id/textViewEDDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxEDFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Favorite"
+        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteY="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
