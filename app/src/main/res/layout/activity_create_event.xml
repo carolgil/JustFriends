@@ -52,7 +52,7 @@
         android:layout_marginStart="17dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="277dp"
-        android:text="Date & Time"
+        android:text="Date / Time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
