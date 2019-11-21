@@ -31,8 +31,8 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
                 return true;
             case R.id.chat_nav:
                 return true;
-                default:
-                    return false;
+            default:
+                return false;
 
         }
     }
