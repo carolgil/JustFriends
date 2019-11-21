@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "337862702569",
+    "firebase_url": "https://justfriends-9a527.firebaseio.com",
+    "project_id": "justfriends-9a527",
+    "storage_bucket": "justfriends-9a527.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:337862702569:android:f5953d053ac265ab128778",
+        "android_client_info": {
+          "package_name": "com.example.justfriends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "337862702569-a42qskcrpgbgsm2cqsp58cr4537qdrid.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.justfriends",
+            "certificate_hash": "36d362136fe4af95ad20f61753944c287588df39"
+          }
+        },
+        {
+          "client_id": "337862702569-bakg2blginsor1bilj2qrq5bnnv1mlcg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEtTG2lGwWHTDduley4r9eyWibLqrp47s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "337862702569-bakg2blginsor1bilj2qrq5bnnv1mlcg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

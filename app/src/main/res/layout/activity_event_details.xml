@@ -60,7 +60,62 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Favorite"
-        tools:layout_editor_absoluteX="311dp"
+        tools:layout_editor_absoluteX="309dp"
         tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textViewEDNumGoing"
+        android:layout_width="116dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="255dp"
+        android:text="Attendees"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEDDetailsBox" />
+
+    <TextView
+        android:id="@+id/textViewEDInterests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="26dp"
+        android:text="Tags"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEDNumGoing" />
+
+    <TextView
+        android:id="@+id/textViewEDInterest1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest 1"
+        tools:layout_editor_absoluteX="131dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textViewEDInterest2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest 2"
+        tools:layout_editor_absoluteX="220dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <TextView
+        android:id="@+id/textViewEDInterest3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Interest 3"
+        tools:layout_editor_absoluteX="309dp"
+        tools:layout_editor_absoluteY="371dp" />
+
+    <Switch
+        android:id="@+id/switchGoing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Going"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="147dp"
+        tools:layout_editor_absoluteY="438dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
