@@ -6,4 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".ProfileInfoActivity">
 
+    <TextView
+        android:id="@+id/textViewInterestsPI"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:text="Interests"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="533dp" />
+
+    <EditText
+        android:id="@+id/editTextEducationPI"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <EditText
+        android:id="@+id/editTextOccupationPI"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <EditText
+        android:id="@+id/editTextAgePI"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:hint="MM/DD/YYYY"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <TextView
+        android:id="@+id/textViewEducationPI"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:text="Education"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <TextView
+        android:id="@+id/textViewDOBPI"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:text="AGE"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="370dp" />
+
+    <TextView
+        android:id="@+id/textViewOccupation"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:text="Occupation"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="428dp" />
+
+    <Button
+        android:id="@+id/buttonEventsPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Events"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <EditText
+        android:id="@+id/editTextLastNamePI"
+        android:layout_width="155dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="98dp" />
+
+    <ImageView
+        android:id="@+id/imageViewProfilePI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="37dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/editTextFirstNamePI"
+        android:layout_width="155dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <Button
+        android:id="@+id/buttonEditProfilePI"
+        android:layout_width="66dp"
+        android:layout_height="37dp"
+        android:text="edit"
+        tools:layout_editor_absoluteX="56dp"
+        tools:layout_editor_absoluteY="149dp" />
+
+    <Button
+        android:id="@+id/buttonInfoPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Info"
+        tools:layout_editor_absoluteX="98dp"
+        tools:layout_editor_absoluteY="228dp" />
+
+    <TextView
+        android:id="@+id/textViewGender"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:text="Gender"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="318dp" />
+
+    <Button
+        android:id="@+id/buttonSignoutPI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign out"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="651dp" />
+
+    <EditText
+        android:id="@+id/editTextGenderPI"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="318dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
