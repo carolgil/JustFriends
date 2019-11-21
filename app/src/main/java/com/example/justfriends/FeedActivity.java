@@ -20,6 +20,8 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_feed);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
         mMainFrame = (FrameLayout) findViewById(R.id.main_frame);
+
+        mMainNav.setOnNavigationItemSelectedListener(this);
     }
 
     @Override
