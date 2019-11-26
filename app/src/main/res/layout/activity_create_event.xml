@@ -149,7 +149,7 @@
         tools:layout_editor_absoluteY="192dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/editTextCreateEventDescription"
         android:layout_width="217dp"
         android:layout_height="83dp"
         android:ems="10"
