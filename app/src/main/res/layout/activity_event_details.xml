@@ -110,7 +110,7 @@
         tools:layout_editor_absoluteY="371dp" />
 
     <Switch
-        android:id="@+id/switchGoing"
+        android:id="@+id/switchEDGoing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Going"
