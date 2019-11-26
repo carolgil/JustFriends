@@ -85,16 +85,6 @@
         tools:layout_editor_absoluteX="213dp"
         tools:layout_editor_absoluteY="228dp" />
 
-    <EditText
-        android:id="@+id/editTextLastNamePI"
-        android:layout_width="155dp"
-        android:layout_height="39dp"
-        android:ems="10"
-        android:hint="Last Name"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="162dp"
-        tools:layout_editor_absoluteY="98dp" />
-
     <ImageView
         android:id="@+id/imageViewProfilePI"
         android:layout_width="wrap_content"
@@ -104,11 +94,11 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/editTextFirstNamePI"
+        android:id="@+id/editTextNamePI"
         android:layout_width="155dp"
         android:layout_height="39dp"
         android:ems="10"
-        android:hint="First Name"
+        android:hint="Name"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="40dp" />
