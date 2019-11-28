@@ -6,4 +6,101 @@
     android:layout_height="match_parent"
     tools:context=".ProfileEventsActivity">
 
+    <TextView
+        android:id="@+id/textViewUpcomingEventsPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="15dp"
+        android:text="Upcoming Events"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInfoPE" />
+
+    <ImageButton
+        android:id="@+id/imageButtonFavoritesPE"
+        android:layout_width="33dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="151dp"
+        android:layout_marginEnd="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNamePE"
+        app:srcCompat="@android:drawable/btn_star" />
+
+    <Button
+        android:id="@+id/buttonEventsPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="317dp"
+        android:text="Events"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSignoutPE"
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonFavoritesPE" />
+
+    <Button
+        android:id="@+id/buttonInfoPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="63dp"
+        android:text="Info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePE" />
+
+    <Button
+        android:id="@+id/buttonSignoutPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginBottom="34dp"
+        android:text="Sign out"
+        app:layout_constraintBottom_toTopOf="@+id/main_nav"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignoutPI"
+        app:menu="@menu/nav_items" />
+
+    <EditText
+        android:id="@+id/editTextNamePE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="143dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEventsPE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProfilePE"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewProfilePE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="37dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textViewPastEventsPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginBottom="227dp"
+        android:text="Past Events"
+        app:layout_constraintBottom_toTopOf="@+id/main_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewUpcomingEventsPE" />
 </androidx.constraintlayout.widget.ConstraintLayout>

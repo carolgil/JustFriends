@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,7 +24,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
     ImageView imageViewProfilePI;
-    FloatingActionButton floatingActionButtonFavoritesPI;
+    ImageButton imageButtonFavoritesPI;
 
 
     @Override
@@ -58,7 +59,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
 
         imageViewProfilePI = findViewById(R.id.imageViewProfilePI);
 
-        floatingActionButtonFavoritesPI = findViewById(R.id.floatingActionButtonFavoritesPI);
+        imageButtonFavoritesPI = findViewById(R.id.imageButtonFavoritesPI);
 
 
     }
