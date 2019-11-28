@@ -7,6 +7,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -14,7 +17,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class ProfileInfoActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
     private BottomNavigationView mMainNav;
-    Button buttonSignoutPI;
+
+    EditText editTextEducationPI, editTextOccupationPI, editTextAgePI,editTextNamePI, editTextGenderPI;
+    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI;
+    Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
+    ImageView imageViewProfilePI;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +32,30 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
 
 
         mMainNav.setOnNavigationItemSelectedListener(this);
+
+        editTextEducationPI = findViewById(R.id.editTextEducationPI);
+        editTextOccupationPI = findViewById(R.id.editTextOccupationPI);
+        editTextAgePI = findViewById(R.id.editTextAgePI);
+        editTextNamePI = findViewById(R.id.editTextNamePI);
+        editTextGenderPI = findViewById(R.id.editTextGenderPI);
+
+        textViewInterestPI = findViewById(R.id.textViewInterestsPI);
+        textViewEducationPI = findViewById(R.id.textViewEducationPI);
+        textViewOccupationPI = findViewById(R.id.textViewOccupationPI);
+        textViewGenderPI = findViewById(R.id.textViewGenderPI);
+
+        buttonEventsPI = findViewById(R.id.buttonEventsPI);
+        buttonEditProfilePI = findViewById(R.id.buttonEditProfilePI);
+        buttonInfoPI = findViewById(R.id.buttonInfoPI);
+        buttonSignoutPI = findViewById(R.id.buttonSignoutPI);
+
+        buttonEventsPI.setOnClickListener(this);
+        buttonEditProfilePI.setOnClickListener(this);
+        buttonInfoPI.setOnClickListener(this);
+        buttonSignoutPI.setOnClickListener(this);
+
+        imageViewProfilePI = findViewById(R.id.imageViewProfilePI);
+
 
     }
 

@@ -70,7 +70,7 @@
         tools:layout_editor_absoluteY="370dp" />
 
     <TextView
-        android:id="@+id/textViewOccupation"
+        android:id="@+id/textViewOccupationPI"
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:text="Occupation"
@@ -120,7 +120,7 @@
         tools:layout_editor_absoluteY="228dp" />
 
     <TextView
-        android:id="@+id/textViewGender"
+        android:id="@+id/textViewGenderPI"
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:text="Gender"
@@ -143,5 +143,20 @@
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="162dp"
         tools:layout_editor_absoluteY="318dp" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButtonFavoritesPI"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="#00000000"
+        android:backgroundTint="#00000000"
+        android:clickable="true"
+        android:focusable="auto"
+        app:backgroundTint="#00000000"
+        app:fabSize="auto"
+        app:rippleColor="#00000000"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:layout_editor_absoluteX="351dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
