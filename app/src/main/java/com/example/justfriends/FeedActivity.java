@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -16,7 +17,10 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
-    TextView textView2;
+    TextView textView2, View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
+            View_Feed_Att, View_Feed_Tag1, View_Feed_Tag2, View_Feed_Tag3;
+    Button Feed_Favourite;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
