@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ProfileInfoActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
@@ -22,6 +23,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
     ImageView imageViewProfilePI;
+    FloatingActionButton floatingActionButtonFavoritesPI;
 
 
     @Override
@@ -55,6 +57,8 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
         // buttonSignoutPI.setOnClickListener();
 
         imageViewProfilePI = findViewById(R.id.imageViewProfilePI);
+
+        floatingActionButtonFavoritesPI = findViewById(R.id.floatingActionButtonFavoritesPI);
 
 
     }
