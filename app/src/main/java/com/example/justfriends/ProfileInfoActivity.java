@@ -49,10 +49,10 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
         buttonInfoPI = findViewById(R.id.buttonInfoPI);
         buttonSignoutPI = findViewById(R.id.buttonSignoutPI);
 
-        buttonEventsPI.setOnClickListener(this);
-        buttonEditProfilePI.setOnClickListener(this);
-        buttonInfoPI.setOnClickListener(this);
-        buttonSignoutPI.setOnClickListener(this);
+        // buttonEventsPI.setOnClickListener();
+        // buttonEditProfilePI.setOnClickListener();
+        // buttonInfoPI.setOnClickListener();
+        // buttonSignoutPI.setOnClickListener();
 
         imageViewProfilePI = findViewById(R.id.imageViewProfilePI);
 

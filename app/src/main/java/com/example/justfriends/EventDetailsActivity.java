@@ -36,6 +36,6 @@ public class EventDetailsActivity extends AppCompatActivity {
         checkBoxEDFavorite = findViewById(R.id.checkBoxEDFavorite);
 
         //Initializing Switch
-        switchEDGoing = findViewById(R.id.switchEDGoing);
+        // switchEDGoing = findViewById(R.id.switchEDGoing);
     }
 }
