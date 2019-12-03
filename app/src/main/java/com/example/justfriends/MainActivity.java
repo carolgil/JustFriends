@@ -53,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         else if (view == buttonRegister) {
             makeNewUsers(editTextEmail.getText().toString(), editTextPassword.getText().toString());
+            Intent profileIntent = new Intent(this, CreateProfileActivity.class);
+            startActivity(profileIntent);
         }
     }
 

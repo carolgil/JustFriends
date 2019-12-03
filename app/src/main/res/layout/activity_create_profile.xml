@@ -16,55 +16,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewBirthday"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Date of Birth"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="98dp" />
-
-    <TextView
-        android:id="@+id/textViewGender"
-        android:layout_width="wrap_content"
-        android:layout_height="19dp"
-        android:text="Gender"
-        app:layout_constraintStart_toStartOf="@+id/textViewBirthday"
-        tools:layout_editor_absoluteY="157dp" />
-
-    <EditText
-        android:id="@+id/editTextGender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextBirthdate"
-        tools:layout_editor_absoluteY="132dp" />
-
-    <TextView
-        android:id="@+id/textViewEducation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Education"
-        app:layout_constraintStart_toStartOf="@+id/textViewGender"
-        tools:layout_editor_absoluteY="217dp" />
-
     <EditText
         android:id="@+id/editTextEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextGender"
-        tools:layout_editor_absoluteY="198dp" />
-
-    <TextView
-        android:id="@+id/textViewHometown"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hometown"
-        app:layout_constraintStart_toStartOf="@+id/textViewEducation"
-        tools:layout_editor_absoluteY="286dp" />
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="268dp" />
 
     <EditText
         android:id="@+id/editTextHometown"
@@ -73,30 +32,64 @@
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="@+id/editTextEducation"
-        tools:layout_editor_absoluteY="268dp" />
+        tools:layout_editor_absoluteY="338dp" />
 
     <TextView
-        android:id="@+id/textViewLocation"
+        android:id="@+id/textViewGender"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Use current location"
-        app:layout_constraintStart_toStartOf="@+id/textViewHometown"
-        tools:layout_editor_absoluteY="356dp" />
+        android:layout_height="19dp"
+        android:text="Gender"
+        app:layout_constraintStart_toStartOf="@+id/textViewAge"
+        tools:layout_editor_absoluteY="227dp" />
 
-    <Switch
-        android:id="@+id/switchLocation"
+    <TextView
+        android:id="@+id/textViewEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Allow"
-        tools:layout_editor_absoluteX="249dp"
-        tools:layout_editor_absoluteY="352dp" />
+        android:text="Education"
+        app:layout_constraintStart_toStartOf="@+id/textViewGender"
+        tools:layout_editor_absoluteY="287dp" />
+
+    <Spinner
+        android:id="@+id/spinnerGender"
+        android:layout_width="213dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="@+id/editTextAge"
+        app:layout_constraintTop_toBottomOf="@+id/editTextAge" />
+
+    <TextView
+        android:id="@+id/textViewAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textAlignment="viewStart"
+        app:layout_constraintStart_toStartOf="@+id/textViewName"
+        tools:layout_editor_absoluteY="168dp" />
+
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="@+id/editTextName"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/textViewHometown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hometown"
+        app:layout_constraintStart_toStartOf="@+id/textViewEducation"
+        tools:layout_editor_absoluteY="356dp" />
 
     <TextView
         android:id="@+id/textViewOccupationPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Occupation"
-        app:layout_constraintStart_toStartOf="@+id/textViewLocation"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="416dp" />
 
     <EditText
@@ -105,26 +98,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextInterests1"
+        tools:layout_editor_absoluteX="174dp"
         tools:layout_editor_absoluteY="403dp" />
-
-    <EditText
-        android:id="@+id/editTextInterests1"
-        android:layout_width="207dp"
-        android:layout_height="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextInterests2"
-        tools:layout_editor_absoluteY="487dp" />
-
-    <EditText
-        android:id="@+id/editTextInterests2"
-        android:layout_width="207dp"
-        android:layout_height="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextInterests3"
-        tools:layout_editor_absoluteY="529dp" />
 
     <Button
         android:id="@+id/buttonCreateProfile"
@@ -132,7 +107,7 @@
         android:layout_height="wrap_content"
         android:text="Create Profile"
         tools:layout_editor_absoluteX="138dp"
-        tools:layout_editor_absoluteY="645dp" />
+        tools:layout_editor_absoluteY="653dp" />
 
     <TextView
         android:id="@+id/textViewInterests"
@@ -142,23 +117,43 @@
         app:layout_constraintStart_toStartOf="@+id/textViewOccupationPI"
         tools:layout_editor_absoluteY="489dp" />
 
-    <EditText
-        android:id="@+id/editTextBirthdate"
+    <Spinner
+        android:id="@+id/spinnerInterest1"
+        android:layout_width="213dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="@+id/spinnerInterest2"
+        tools:layout_editor_absoluteY="489dp" />
+
+    <Spinner
+        android:id="@+id/spinnerInterest2"
+        android:layout_width="213dp"
+        android:layout_height="36dp"
+        app:layout_constraintStart_toStartOf="@+id/spinnerInterest3"
+        tools:layout_editor_absoluteY="544dp" />
+
+    <Spinner
+        android:id="@+id/spinnerInterest3"
+        android:layout_width="213dp"
+        android:layout_height="36dp"
+        tools:layout_editor_absoluteX="174dp"
+        tools:layout_editor_absoluteY="599dp" />
+
+    <TextView
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:ems="10"
-        android:inputType="date"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="72dp" />
+        android:text="Name"
+        android:textAlignment="viewStart"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="106dp" />
 
     <EditText
-        android:id="@+id/editTextInterests3"
-        android:layout_width="207dp"
-        android:layout_height="30dp"
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="571dp" />
+        tools:layout_editor_absoluteY="83dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
