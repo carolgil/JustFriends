@@ -33,14 +33,12 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
         spinnerGender = findViewById(R.id.spinnerGender);
         spinnerInterest1 = findViewById(R.id.spinnerInterest1);
         spinnerInterest2 = findViewById(R.id.spinnerInterest2);
-        spinnerInterest3 = findViewById(R.id.spinnerInterest3);
         buttonCreateProfile = findViewById(R.id.buttonCreateProfile);
 
         buttonCreateProfile.setOnClickListener(this);
         spinnerGender.setOnItemSelectedListener(this);
         spinnerInterest1.setOnItemSelectedListener(this);
         spinnerInterest2.setOnItemSelectedListener(this);
-        spinnerInterest3.setOnItemSelectedListener(this);
 
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.gender_array, android.R.layout.simple_spinner_item);
@@ -56,12 +54,6 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
                 R.array.interests_array, android.R.layout.simple_spinner_item);
         adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerInterest2.setAdapter(adapter2);
-
-        ArrayAdapter<CharSequence> adapter3 = ArrayAdapter.createFromResource(this,
-                R.array.interests_array, android.R.layout.simple_spinner_item);
-        adapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerInterest3.setAdapter(adapter3);
-
     }
 
     @Override
@@ -79,11 +71,10 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
             String gender = spinnerGender.getSelectedItem().toString();
             String interest1 = spinnerInterest1.getSelectedItem().toString();
             String interest2 = spinnerInterest2.getSelectedItem().toString();
-            String interest3 = spinnerInterest3.getSelectedItem().toString();
 
 
 
-            User myUser = new User(name, age, education, hometown, occupation, gender, interest1, interest2, interest3);
+            User myUser = new User(name, age, education, hometown, occupation, gender, interest1, interest2);
             myRef.push().setValue(myUser);
         }
     }
