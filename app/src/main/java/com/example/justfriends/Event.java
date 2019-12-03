@@ -21,5 +21,5 @@ public class Event {
         this.eventDescription = eventDescription;
         this.eventCap = eventCap;
     }
-    
+
 }
