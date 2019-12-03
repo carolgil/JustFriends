@@ -17,7 +17,7 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
-    TextView textView2, View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
+    TextView View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
             View_Feed_Att, View_Feed_Tag1, View_Feed_Tag2, View_Feed_Tag3;
     Button Feed_Favourite;
 
@@ -26,7 +26,11 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
-
+        View_Feed_Att = findViewById(R.id.View_Feed_Att);
+        View_Feed_Name = findViewById(R.id.View_Feed_Name);
+        View_Feed_Date = findViewById(R.id.View_Feed_Date);
+        View_Feed_Time = findViewById(R.id.View_Feed_Time);
+        View_Feed_Location = findViewById(R.id.View_Feed_Location);
 
         mMainNav.setOnNavigationItemSelectedListener(this);
     }
