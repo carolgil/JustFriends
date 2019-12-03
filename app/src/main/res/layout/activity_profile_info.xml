@@ -22,10 +22,12 @@
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="109dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="283dp"
         android:text="Interests"
-        app:layout_constraintBottom_toTopOf="@+id/main_nav"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEducationPI" />
 
     <EditText
         android:id="@+id/editTextEducationPI"
@@ -33,8 +35,10 @@
         android:layout_height="33dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
         android:ems="10"
         android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewEducationPI"
         app:layout_constraintTop_toBottomOf="@+id/editTextOccupationPI" />
 
@@ -42,63 +46,75 @@
         android:id="@+id/editTextOccupationPI"
         android:layout_width="218dp"
         android:layout_height="33dp"
+        android:layout_marginStart="35dp"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="31dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewOccupationPI"
         app:layout_constraintTop_toBottomOf="@+id/editTextAgePI" />
 
     <EditText
         android:id="@+id/editTextAgePI"
         android:layout_width="218dp"
         android:layout_height="0dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="19dp"
         android:layout_marginEnd="31dp"
         android:ems="10"
         android:hint="MM/DD/YYYY"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="370dp" />
+        app:layout_constraintStart_toEndOf="@+id/textViewDOBPI"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGenderPI" />
 
     <TextView
         android:id="@+id/textViewEducationPI"
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
         android:text="Education"
-        app:layout_constraintBottom_toTopOf="@+id/textViewInterestsPI"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextEducationPI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOccupationPI" />
 
     <TextView
         android:id="@+id/textViewDOBPI"
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="25dp"
         android:text="AGE"
-        app:layout_constraintBottom_toTopOf="@+id/textViewOccupationPI"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextAgePI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewGenderPI" />
 
     <TextView
         android:id="@+id/textViewOccupationPI"
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
         android:text="Occupation"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEducationPI"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextOccupationPI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDOBPI" />
 
     <Button
         android:id="@+id/buttonEventsPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginBottom="42dp"
+        android:layout_marginTop="143dp"
         android:text="Events"
-        app:layout_constraintBottom_toTopOf="@+id/editTextGenderPI"
-        app:layout_constraintStart_toEndOf="@+id/buttonInfoPI" />
+        app:layout_constraintEnd_toStartOf="@+id/imageButtonFavoritesPI"
+        app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNamePI" />
 
     <Button
         android:id="@+id/buttonInfoPI"
@@ -106,7 +122,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="119dp"
         android:layout_marginTop="63dp"
+        android:layout_marginEnd="11dp"
         android:text="Info"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePI" />
 
@@ -115,6 +133,8 @@
         android:layout_width="33dp"
         android:layout_height="32dp"
         android:layout_marginTop="151dp"
+        android:layout_marginEnd="61dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonEventsPI"
         app:layout_constraintTop_toBottomOf="@+id/editTextNamePI"
         app:srcCompat="@android:drawable/btn_star" />
@@ -125,6 +145,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginTop="37dp"
+        android:layout_marginEnd="13dp"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNamePI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
@@ -133,33 +155,39 @@
         android:id="@+id/editTextNamePI"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
         android:layout_marginTop="40dp"
         android:layout_marginEnd="35dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewProfilePI"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonEditProfilePI"
         android:layout_width="66dp"
         android:layout_height="37dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="323dp"
-        android:layout_marginBottom="116dp"
         android:text="edit"
-        app:layout_constraintBottom_toTopOf="@+id/textViewGenderPI"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePI" />
 
     <TextView
         android:id="@+id/textViewGenderPI"
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginBottom="19dp"
+        android:layout_marginTop="47dp"
+        android:layout_marginEnd="25dp"
         android:text="Gender"
-        app:layout_constraintBottom_toTopOf="@+id/textViewDOBPI"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/editTextGenderPI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
 
     <Button
         android:id="@+id/buttonSignoutPI"
@@ -177,11 +205,13 @@
         android:id="@+id/editTextGenderPI"
         android:layout_width="218dp"
         android:layout_height="33dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="42dp"
         android:layout_marginEnd="31dp"
-        android:layout_marginBottom="19dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextAgePI"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewGenderPI"
+        app:layout_constraintTop_toBottomOf="@+id/buttonEventsPI" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

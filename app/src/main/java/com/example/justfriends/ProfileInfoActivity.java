@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -16,9 +17,10 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ProfileInfoActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class ProfileInfoActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView mMainNav;
+
 
     EditText editTextEducationPI, editTextOccupationPI, editTextAgePI,editTextNamePI, editTextGenderPI;
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI;
@@ -62,6 +64,13 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
         imageButtonFavoritesPI = findViewById(R.id.imageButtonFavoritesPI);
 
 
+        //Set Listener
+        buttonEventsPI.setOnClickListener(this);
+        buttonEditProfilePI.setOnClickListener(this);
+        buttonInfoPI.setOnClickListener(this);
+        buttonSignoutPI.setOnClickListener(this);
+
+
     }
 
 
@@ -81,5 +90,10 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
             startActivity(chatIntent);
         }
         return false;
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
