@@ -22,7 +22,7 @@
         android:layout_width="376dp"
         android:layout_height="245dp"
         android:layout_marginTop="176dp"
-        android:background="#005E4C4C"
+        android:background="#F7F6F6"
         android:outlineProvider="bounds"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
