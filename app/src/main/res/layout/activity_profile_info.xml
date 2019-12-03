@@ -123,6 +123,7 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="63dp"
         android:layout_marginEnd="11dp"
+        android:background="#A7A7A7"
         android:text="Info"
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
@@ -170,10 +171,11 @@
         android:layout_width="66dp"
         android:layout_height="37dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="323dp"
         android:text="edit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePI" />
 

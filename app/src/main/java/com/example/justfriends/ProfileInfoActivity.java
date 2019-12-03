@@ -95,5 +95,26 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
     @Override
     public void onClick(View view) {
 
+        //Making the buttons work
+
+        if (view == buttonSignoutPI) {
+            Intent logoutIntent = new Intent(this, MainActivity.class);
+            startActivity(logoutIntent);
+        }
+
+        if (view == buttonEventsPI) {
+            Intent eventIntent = new Intent(this, ProfileEventsActivity.class);
+            startActivity(eventIntent);
+        }
+
+        if (view == buttonInfoPI) {
+            Toast.makeText(this, "You are already on the info page!", Toast.LENGTH_SHORT).show();
+
+        }
+
+
+
+
+
     }
 }
