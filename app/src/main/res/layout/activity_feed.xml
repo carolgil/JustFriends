@@ -88,28 +88,11 @@
             android:id="@+id/View_Feed_Tag1"
             android:layout_width="90dp"
             android:layout_height="27dp"
+            android:layout_marginLeft="150dp"
             android:layout_marginTop="210dp"
             android:outlineProvider="bounds"
             android:text="Tag1"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/View_Feed_Tag2"
-            android:layout_width="90dp"
-            android:layout_height="27dp"
-            android:layout_marginLeft="100dp"
-            android:layout_marginTop="210dp"
-            android:outlineProvider="bounds"
-            android:text="Tag2" />
-
-        <TextView
-            android:id="@+id/View_Feed_Tag3"
-            android:layout_width="90dp"
-            android:layout_height="27dp"
-            android:layout_marginLeft="210dp"
-            android:layout_marginTop="210dp"
-            android:outlineProvider="bounds"
-            android:text="Tag3" />
 
         <Button
             android:id="@+id/Favourite "
@@ -118,6 +101,16 @@
             android:layout_marginLeft="290dp"
             android:text="Favorite"
             android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/edit_Interest_Tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="210dp"
+            android:text="Interest"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </FrameLayout>
 

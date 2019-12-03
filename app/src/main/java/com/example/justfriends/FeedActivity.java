@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.TextView;
@@ -13,13 +14,13 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
     TextView View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
-            View_Feed_Att, View_Feed_Tag1, View_Feed_Tag2, View_Feed_Tag3;
-    Button Feed_Favourite;
+            View_Feed_Att, View_Feed_Tag1, edit_Interest_Tag;
+    Button Favourite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +32,11 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         View_Feed_Date = findViewById(R.id.View_Feed_Date);
         View_Feed_Time = findViewById(R.id.View_Feed_Time);
         View_Feed_Location = findViewById(R.id.View_Feed_Location);
+        View_Feed_Tag1 =  findViewById(R.id.View_Feed_Tag1);
+        edit_Interest_Tag = findViewById(R.id.edit_Interest_Tag);
+        Favourite = findViewById(R.id.Favourite);
+
+        Favourite.setOnClickListener(this);
 
         mMainNav.setOnNavigationItemSelectedListener(this);
     }
@@ -51,5 +57,10 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
             startActivity(chatIntent);
         }
         return false;
+    }
+
+    @Override
+    public void onClick(View view) {
+
     }
 }
