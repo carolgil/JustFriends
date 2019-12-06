@@ -2,6 +2,7 @@ package com.example.justfriends;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,7 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class CreateProfileActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     EditText editTextName, editTextAge, editTextEducation, editTextHometown, editTextOccupation;
-    Spinner spinnerGender, spinnerInterest1, spinnerInterest2, spinnerInterest3;
+    Spinner spinnerGender, spinnerInterest1, spinnerInterest2;
     Button buttonCreateProfile;
 
     @Override
@@ -73,18 +74,17 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
             String interest2 = spinnerInterest2.getSelectedItem().toString();
 
 
-
             User myUser = new User(name, age, education, hometown, occupation, gender, interest1, interest2);
             myRef.push().setValue(myUser);
+
+            Intent feedIntent = new Intent(CreateProfileActivity.this, FeedActivity.class);
+            startActivity(feedIntent);
         }
     }
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-        String gender = spinnerGender.getItemAtPosition(i).toString();
-        String interest1 = spinnerInterest1.getItemAtPosition(i).toString();
-        String interest2 = spinnerInterest2.getItemAtPosition(i).toString();
-        String interest3 = spinnerInterest3.getItemAtPosition(i).toString();
+
     }
 
     @Override

@@ -34,7 +34,7 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         View_Feed_Location = findViewById(R.id.View_Feed_Location);
         View_Feed_Tag1 =  findViewById(R.id.View_Feed_Tag1);
         edit_Interest_Tag = findViewById(R.id.edit_Interest_Tag);
-        Favourite = findViewById(R.id.Favourite);
+        Favourite = findViewById(R.id.buttonFavourite);
 
         Favourite.setOnClickListener(this);
 
