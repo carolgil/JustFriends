@@ -3,6 +3,8 @@ package com.example.justfriends;
 import android.widget.Spinner;
 
 public class User {
+
+    public String email;
     public String name;
     public int age;
     public String gender;
@@ -16,7 +18,8 @@ public class User {
 
     }
 
-    public User(String name, int age, String gender, String education, String hometown, String occupation, String interest1, String interest2) {
+    public User(String email, String name, int age, String gender, String education, String hometown, String occupation, String interest1, String interest2) {
+        this.email = email;
         this.name = name;
         this.age = age;
         this.gender = gender;

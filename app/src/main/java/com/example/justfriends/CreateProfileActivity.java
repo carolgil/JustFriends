@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Switch;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -65,6 +66,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
         DatabaseReference myRef = database.getReference("Users");
 
         if (buttonCreateProfile == view) {
+            String email = FirebaseAuth.getInstance().getCurrentUser().getEmail();
             String name = editTextName.getText().toString();
             int age = Integer.parseInt(editTextAge.getText().toString());
             String education = editTextEducation.getText().toString();
@@ -75,7 +77,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
             String interest2 = spinnerInterest2.getSelectedItem().toString();
 
 
-            User myUser = new User(name, age, education, hometown, occupation, gender, interest1, interest2);
+            User myUser = new User(email, name, age, education, hometown, occupation, gender, interest1, interest2);
             myRef.push().setValue(myUser);
 
             Intent feedIntent = new Intent(CreateProfileActivity.this, FeedActivity.class);
