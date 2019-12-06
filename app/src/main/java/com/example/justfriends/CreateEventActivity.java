@@ -58,7 +58,7 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
         } else if (menuItem.getItemId() == R.id.profile_nav) {
 
             Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
-            Intent profileIntent = new Intent(CreateEventActivity.this, ProfileEventsActivity.class);
+            Intent profileIntent = new Intent(CreateEventActivity.this, ProfileInfoActivity.class);
             startActivity(profileIntent);
         } else if (menuItem.getItemId() == R.id.create_nav) {
             Toast.makeText(this, "Create", Toast.LENGTH_SHORT).show();
