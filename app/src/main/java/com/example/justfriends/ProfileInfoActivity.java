@@ -21,9 +21,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
 
     private BottomNavigationView mMainNav;
 
-
-    EditText editTextEducationPI, editTextOccupationPI, editTextAgePI,editTextNamePI, editTextGenderPI;
-    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI;
+    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
     ImageView imageViewProfilePI;
     ImageButton imageButtonFavoritesPI;
@@ -33,16 +31,17 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_info);
+
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
 
 
         mMainNav.setOnNavigationItemSelectedListener(this);
 
-        editTextEducationPI = findViewById(R.id.editTextEducationPI);
-        editTextOccupationPI = findViewById(R.id.editTextOccupationPI);
-        editTextAgePI = findViewById(R.id.editTextAgePI);
-        editTextNamePI = findViewById(R.id.editTextNamePI);
-        editTextGenderPI = findViewById(R.id.editTextGenderPI);
+        textViewEducationPIOutput = findViewById(R.id.textViewEducationPIOutput);
+        textViewOccupationPIOutput = findViewById(R.id.textViewOccupationPIOutput);
+        textViewAgePIOutput = findViewById(R.id.textViewAgePIOutput);
+        textViewNamePIOutput = findViewById(R.id.textViewNamePIOutput);
+        textViewGenderPIOutput = findViewById(R.id.textViewGenderPIOutput);
 
         textViewInterestPI = findViewById(R.id.textViewInterestsPI);
         textViewEducationPI = findViewById(R.id.textViewEducationPI);
@@ -85,7 +84,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
             Intent profileIntent = new Intent(ProfileInfoActivity.this, ProfileInfoActivity.class);
             startActivity(profileIntent);
         } else if (menuItem.getItemId() == R.id.create_nav) {
-            Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Create", Toast.LENGTH_SHORT).show();
             Intent chatIntent = new Intent(ProfileInfoActivity.this, ChatActivity.class);
             startActivity(chatIntent);
         }
