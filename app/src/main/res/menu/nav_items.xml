@@ -6,9 +6,9 @@
         android:icon="@drawable/ic_action_home"
         android:title="Home" />
     <item
-        android:id="@+id/chat_nav"
-        android:icon="@drawable/ic_action_chat"
-        android:title="Chat" />
+        android:id="@+id/create_nav"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Create" />
     <item
         android:id="@+id/profile_nav"
         android:icon="@drawable/ic_action_profile"

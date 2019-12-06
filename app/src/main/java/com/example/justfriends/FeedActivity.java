@@ -52,9 +52,9 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
             Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
             Intent profileIntent = new Intent(FeedActivity.this, ProfileEventsActivity.class);
             startActivity(profileIntent);
-        } else if (menuItem.getItemId() == R.id.chat_nav) {
-            Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
-            Intent chatIntent = new Intent(FeedActivity.this, ChatActivity.class);
+        } else if (menuItem.getItemId() == R.id.create_nav) {
+            Toast.makeText(this, "Create", Toast.LENGTH_SHORT).show();
+            Intent chatIntent = new Intent(FeedActivity.this, CreateEventActivity.class);
             startActivity(chatIntent);
         }
         return false;

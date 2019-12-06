@@ -15,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class ProfileInfoActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -84,7 +83,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
             Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
             Intent profileIntent = new Intent(ProfileInfoActivity.this, ProfileEventsActivity.class);
             startActivity(profileIntent);
-        } else if (menuItem.getItemId() == R.id.chat_nav) {
+        } else if (menuItem.getItemId() == R.id.create_nav) {
             Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
             Intent chatIntent = new Intent(ProfileInfoActivity.this, ChatActivity.class);
             startActivity(chatIntent);
