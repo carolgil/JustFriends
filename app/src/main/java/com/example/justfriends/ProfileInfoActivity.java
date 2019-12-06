@@ -58,7 +58,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         // buttonInfoPI.setOnClickListener();
         // buttonSignoutPI.setOnClickListener();
 
-        imageViewProfilePI = findViewById(R.id.imageViewProfilePI);
+
 
         imageButtonFavoritesPI = findViewById(R.id.imageButtonFavoritesPI);
 
@@ -85,7 +85,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
             startActivity(profileIntent);
         } else if (menuItem.getItemId() == R.id.create_nav) {
             Toast.makeText(this, "Create", Toast.LENGTH_SHORT).show();
-            Intent chatIntent = new Intent(ProfileInfoActivity.this, ChatActivity.class);
+            Intent chatIntent = new Intent(ProfileInfoActivity.this, CreateEventActivity.class);
             startActivity(chatIntent);
         }
         return false;
