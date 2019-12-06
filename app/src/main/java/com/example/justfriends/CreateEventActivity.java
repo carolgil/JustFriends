@@ -7,18 +7,25 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class CreateEventActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
+public class CreateEventActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
     EditText editTextCreateEventName, editTextCreateEventLocation, editTextCreateEventDate, editTextCreateEventTime,
             editTextCreateEventDescription, editTextCreateEventCap;
     Button buttonCreateEventCreate;
-    private BottomNavigationView mMainNav;
+    Spinner spinnerEventTag;
 
+    private BottomNavigationView mMainNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,16 +44,44 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
 
         //Read button + set listener
         buttonCreateEventCreate = findViewById(R.id.buttonCreateEventCreate);
-
         buttonCreateEventCreate.setOnClickListener(this);
-
         mMainNav.setOnNavigationItemSelectedListener(this);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.interests_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerEventTag.setAdapter(adapter);
 
 
     }
 
     @Override
     public void onClick(View view) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef2 = database.getReference("Events");
+
+        if (view == buttonCreateEventCreate) {
+            String creator = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+            String name = editTextCreateEventName.getText().toString();
+            String location = editTextCreateEventLocation.getText().toString();
+            String date = editTextCreateEventDate.getText().toString();
+            String time = editTextCreateEventTime.getText().toString();
+
+//            int age = Integer.parseInt(editTextAge.getText().toString());
+//            String education = editTextEducation.getText().toString();
+//            String hometown = editTextHometown.getText().toString();
+//            String occupation = editTextOccupation.getText().toString();
+//            String gender = spinnerGender.getSelectedItem().toString();
+//            String interest1 = spinnerInterest1.getSelectedItem().toString();
+//            String interest2 = spinnerInterest2.getSelectedItem().toString();
+//
+//
+//            Event myEvent  = new Event(email, name, age, education, hometown, occupation, gender, interest1, interest2);
+//            myRef.push().setValue(myUser);
+//
+//            Intent feedIntent = new Intent(CreateProfileActivity.this, FeedActivity.class);
+//            startActivity(feedIntent);
+        }
 
     }
 
@@ -66,5 +101,15 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
             startActivity(chatIntent);
         }
         return false;
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }

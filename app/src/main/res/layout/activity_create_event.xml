@@ -186,10 +186,10 @@
         android:hint="e.g. 15"
         android:inputType="number"
         app:layout_constraintStart_toEndOf="@+id/textViewCreateEventCap"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEventTag" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerEventTag"
         android:layout_width="223dp"
         android:layout_height="39dp"
         android:layout_marginStart="31dp"
