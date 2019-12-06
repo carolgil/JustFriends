@@ -103,7 +103,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="44dp"
         android:text="Events"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonFavoritesPI"
         app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
@@ -114,13 +114,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="119dp"
-        android:layout_marginTop="12dp"
         android:layout_marginEnd="11dp"
         android:background="#A7A7A7"
         android:text="Info"
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePI" />
+        tools:layout_editor_absoluteY="159dp" />
 
     <ImageButton
         android:id="@+id/imageButtonFavoritesPI"
@@ -133,44 +132,25 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput"
         app:srcCompat="@android:drawable/btn_star" />
 
-    <ImageView
-        android:id="@+id/imageViewProfilePI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="13dp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewNamePIOutput"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <TextView
         android:id="@+id/textViewNamePIOutput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
         android:layout_marginTop="96dp"
-        android:layout_marginEnd="35dp"
+        android:layout_marginEnd="204dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewProfilePI"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonEditProfilePI"
         android:layout_width="66dp"
         android:layout_height="37dp"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="323dp"
         android:text="edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePI" />
+        tools:layout_editor_absoluteX="284dp"
+        tools:layout_editor_absoluteY="87dp" />
 
     <TextView
         android:id="@+id/textViewGenderPI"
@@ -190,7 +170,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="162dp"
         android:text="Sign out"
         app:layout_constraintEnd_toEndOf="parent"
@@ -208,5 +188,23 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
+
+    <TextView
+        android:id="@+id/textViewInterest1Output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewInterestsPI"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
+
+    <TextView
+        android:id="@+id/textViewInterests2Output"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="125dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
