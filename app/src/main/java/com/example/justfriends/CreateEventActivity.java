@@ -1,16 +1,23 @@
 package com.example.justfriends;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-public class CreateEventActivity extends AppCompatActivity implements View.OnClickListener{
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+public class CreateEventActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
     EditText editTextCreateEventName, editTextCreateEventLocation, editTextCreateEventDate, editTextCreateEventTime,
             editTextCreateEventDescription, editTextCreateEventCap;
     Button buttonCreateEventCreate;
+    private BottomNavigationView mMainNav;
 
 
     @Override
@@ -18,6 +25,7 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_event);
 
+        mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
 
         // Read editText
         editTextCreateEventName = findViewById(R.id.editTextCreateEventName);
@@ -32,11 +40,31 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
 
         buttonCreateEventCreate.setOnClickListener(this);
 
+        mMainNav.setOnNavigationItemSelectedListener(this);
+
 
     }
 
     @Override
     public void onClick(View view) {
 
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        if (menuItem.getItemId() == R.id.home_nav) {
+            Intent landingsIntent = new Intent(CreateEventActivity.this, FeedActivity.class);
+            startActivity(landingsIntent);
+        } else if (menuItem.getItemId() == R.id.profile_nav) {
+
+            Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
+            Intent profileIntent = new Intent(CreateEventActivity.this, ProfileEventsActivity.class);
+            startActivity(profileIntent);
+        } else if (menuItem.getItemId() == R.id.create_nav) {
+            Toast.makeText(this, "Create", Toast.LENGTH_SHORT).show();
+            Intent chatIntent = new Intent(CreateEventActivity.this, CreateEventActivity.class);
+            startActivity(chatIntent);
+        }
+        return false;
     }
 }
