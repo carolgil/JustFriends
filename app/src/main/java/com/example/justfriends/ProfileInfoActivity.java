@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -81,7 +82,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         } else if (menuItem.getItemId() == R.id.profile_nav) {
 
             Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
-            Intent profileIntent = new Intent(ProfileInfoActivity.this, ProfileEventsActivity.class);
+            Intent profileIntent = new Intent(ProfileInfoActivity.this, ProfileInfoActivity.class);
             startActivity(profileIntent);
         } else if (menuItem.getItemId() == R.id.create_nav) {
             Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
