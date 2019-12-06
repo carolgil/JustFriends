@@ -10,14 +10,14 @@
         android:id="@+id/main_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="34dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignoutPI"
-        app:layout_constraintVertical_bias="0.0"
-        app:menu="@menu/nav_items" />
+        app:menu="@menu/nav_items"
+        app:itemIconTint="@drawable/navbar_color"
+        app:itemTextColor="@drawable/navbar_color"
+        app:labelVisibilityMode="labeled"
+        android:state_checked="true"/>
 
     <TextView
         android:id="@+id/textViewInterestsPI"
@@ -172,7 +172,9 @@
         android:layout_marginStart="161dp"
         android:layout_marginTop="72dp"
         android:layout_marginEnd="162dp"
+        android:layout_marginBottom="34dp"
         android:text="Sign out"
+        app:layout_constraintBottom_toTopOf="@+id/main_nav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
