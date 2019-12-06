@@ -41,6 +41,7 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
         editTextCreateEventTime = findViewById(R.id.editTextCreateEventTime);
         editTextCreateEventDescription = findViewById(R.id.editTextCreateEventDescription);
         editTextCreateEventCap = findViewById(R.id.editTextCreateEventCap);
+        spinnerEventTag = findViewById(R.id.spinnerEventTag);
 
         //Read button + set listener
         buttonCreateEventCreate = findViewById(R.id.buttonCreateEventCreate);
@@ -66,21 +67,14 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
             String location = editTextCreateEventLocation.getText().toString();
             String date = editTextCreateEventDate.getText().toString();
             String time = editTextCreateEventTime.getText().toString();
+            String description = editTextCreateEventDescription.getText().toString();
+            int cap = Integer.parseInt(editTextCreateEventCap.getText().toString());
 
-//            int age = Integer.parseInt(editTextAge.getText().toString());
-//            String education = editTextEducation.getText().toString();
-//            String hometown = editTextHometown.getText().toString();
-//            String occupation = editTextOccupation.getText().toString();
-//            String gender = spinnerGender.getSelectedItem().toString();
-//            String interest1 = spinnerInterest1.getSelectedItem().toString();
-//            String interest2 = spinnerInterest2.getSelectedItem().toString();
-//
-//
-//            Event myEvent  = new Event(email, name, age, education, hometown, occupation, gender, interest1, interest2);
-//            myRef.push().setValue(myUser);
-//
-//            Intent feedIntent = new Intent(CreateProfileActivity.this, FeedActivity.class);
-//            startActivity(feedIntent);
+            Event myEvent  = new Event(name, location, date, time, description, creator, cap);
+            myRef2.push().setValue(myEvent);
+
+            Intent feedIntent = new Intent(CreateEventActivity.this, FeedActivity.class);
+            startActivity(feedIntent);
         }
 
     }
