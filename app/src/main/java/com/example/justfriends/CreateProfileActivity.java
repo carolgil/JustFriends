@@ -15,6 +15,7 @@ import android.widget.Switch;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+
 public class CreateProfileActivity extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
 
     EditText editTextName, editTextAge, editTextEducation, editTextHometown, editTextOccupation;

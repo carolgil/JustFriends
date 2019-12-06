@@ -95,7 +95,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/buttonFavourite"
+            android:id="@+id/Favourite "
             android:layout_width="72dp"
             android:layout_height="30dp"
             android:layout_marginLeft="290dp"
