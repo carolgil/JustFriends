@@ -64,7 +64,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements BottomNa
             Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
             Intent profileIntent = new Intent(ProfileEventsActivity.this, ProfileEventsActivity.class);
             startActivity(profileIntent);
-        } else if (menuItem.getItemId() == R.id.chat_nav) {
+        } else if (menuItem.getItemId() == R.id.create_nav) {
             Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
             Intent chatIntent = new Intent(ProfileEventsActivity.this, ChatActivity.class);
             startActivity(chatIntent);

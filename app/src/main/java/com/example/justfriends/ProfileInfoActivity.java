@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -15,14 +16,13 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ProfileInfoActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
+public class ProfileInfoActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView mMainNav;
 
 
-    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI,
-            textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput,
-            textViewAgePIOutput,textViewNamePIOutput, textViewGenderPIOutput;
+    EditText editTextEducationPI, editTextOccupationPI, editTextAgePI,editTextNamePI, editTextGenderPI;
+    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
     ImageView imageViewProfilePI;
     ImageButton imageButtonFavoritesPI;
@@ -37,11 +37,11 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
 
         mMainNav.setOnNavigationItemSelectedListener(this);
 
-        textViewEducationPIOutput = findViewById(R.id.textViewEducationPIOutput);
-        textViewOccupationPIOutput = findViewById(R.id.textViewOccupationPIOutput);
-        textViewAgePIOutput = findViewById(R.id.textViewAgePIOutput);
-        textViewNamePIOutput = findViewById(R.id.textViewNamePI);
-        textViewGenderPIOutput = findViewById(R.id.textViewGenderPIOutput);
+        editTextEducationPI = findViewById(R.id.editTextEducationPI);
+        editTextOccupationPI = findViewById(R.id.editTextOccupationPI);
+        editTextAgePI = findViewById(R.id.editTextAgePI);
+        editTextNamePI = findViewById(R.id.editTextNamePI);
+        editTextGenderPI = findViewById(R.id.editTextGenderPI);
 
         textViewInterestPI = findViewById(R.id.textViewInterestsPI);
         textViewEducationPI = findViewById(R.id.textViewEducationPI);
@@ -63,6 +63,13 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
         imageButtonFavoritesPI = findViewById(R.id.imageButtonFavoritesPI);
 
 
+        //Set Listener
+        buttonEventsPI.setOnClickListener(this);
+        buttonEditProfilePI.setOnClickListener(this);
+        buttonInfoPI.setOnClickListener(this);
+        buttonSignoutPI.setOnClickListener(this);
+
+
     }
 
 
@@ -76,11 +83,37 @@ public class ProfileInfoActivity extends AppCompatActivity implements BottomNavi
             Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
             Intent profileIntent = new Intent(ProfileInfoActivity.this, ProfileEventsActivity.class);
             startActivity(profileIntent);
-        } else if (menuItem.getItemId() == R.id.chat_nav) {
+        } else if (menuItem.getItemId() == R.id.create_nav) {
             Toast.makeText(this, "Chat", Toast.LENGTH_SHORT).show();
             Intent chatIntent = new Intent(ProfileInfoActivity.this, ChatActivity.class);
             startActivity(chatIntent);
         }
         return false;
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        //Making the buttons work
+
+        if (view == buttonSignoutPI) {
+            Intent logoutIntent = new Intent(this, MainActivity.class);
+            startActivity(logoutIntent);
+        }
+
+        if (view == buttonEventsPI) {
+            Intent eventIntent = new Intent(this, ProfileEventsActivity.class);
+            startActivity(eventIntent);
+        }
+
+        if (view == buttonInfoPI) {
+            Toast.makeText(this, "You are already on the info page!", Toast.LENGTH_SHORT).show();
+
+        }
+
+
+
+
+
     }
 }
