@@ -23,7 +23,7 @@
         android:layout_marginTop="151dp"
         android:layout_marginEnd="72dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNamePE"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePEOutput"
         app:srcCompat="@android:drawable/btn_star" />
 
     <Button
@@ -66,8 +66,8 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSignoutPI"
         app:menu="@menu/nav_items" />
 
-    <EditText
-        android:id="@+id/editTextNamePE"
+    <TextView
+        android:id="@+id/textViewNamePEOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
