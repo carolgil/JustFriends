@@ -13,8 +13,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/nav_items"
-        app:itemIconTint="@drawable/navbar_color"
-        app:itemTextColor="@drawable/navbar_color"
         android:state_checked="true"
         app:labelVisibilityMode="labeled"
         />

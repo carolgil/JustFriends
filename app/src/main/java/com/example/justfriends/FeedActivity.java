@@ -2,6 +2,8 @@ package com.example.justfriends;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,6 +20,8 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
 
     private BottomNavigationView mMainNav;
     private FrameLayout mMainFrame;
+
+
     TextView View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
             View_Feed_Att, View_Event_Filter;
     Button Event_Button_Favourite,Event_Details;
@@ -36,15 +40,20 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         Event_Details = findViewById(R.id.Event_Details);
         View_Event_Filter = findViewById(R.id.View_Event_Filter);
 
+
         Event_Button_Favourite.setOnClickListener(this);
         Event_Details.setOnClickListener(this);
 
+
         mMainNav.setOnNavigationItemSelectedListener(this);
+
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
         if (menuItem.getItemId() == R.id.home_nav) {
+
             Intent landingsIntent = new Intent(FeedActivity.this, FeedActivity.class);
             startActivity(landingsIntent);
             return true;
@@ -56,6 +65,7 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
             return true;
 
         } else if (menuItem.getItemId() == R.id.create_nav) {
+
             Intent chatIntent = new Intent(FeedActivity.this, CreateEventActivity.class);
             startActivity(chatIntent);
             return true;
@@ -65,6 +75,10 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onClick(View view) {
+        if (Event_Details == view){
+            Intent chatIntent = new Intent(FeedActivity.this, Event_DetailActivity.class);
+            startActivity(chatIntent);
+        }
 
     }
 }

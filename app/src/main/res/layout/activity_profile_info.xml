@@ -14,8 +14,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/nav_items"
-        app:itemIconTint="@drawable/navbar_color"
-        app:itemTextColor="@drawable/navbar_color"
         app:labelVisibilityMode="labeled"
         android:state_checked="true"/>
 
