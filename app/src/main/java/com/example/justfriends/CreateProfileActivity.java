@@ -77,7 +77,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
             String interest2 = spinnerInterest2.getSelectedItem().toString();
 
 
-            User myUser = new User(email, name, age, education, hometown, occupation, gender, interest1, interest2);
+            User myUser = new User(email, name, age, gender, education, hometown, occupation, interest1, interest2);
             myRef.push().setValue(myUser);
 
             Intent feedIntent = new Intent(CreateProfileActivity.this, FeedActivity.class);
