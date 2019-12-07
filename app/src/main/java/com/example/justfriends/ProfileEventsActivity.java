@@ -20,7 +20,7 @@ public class ProfileEventsActivity extends AppCompatActivity {
 
     EditText editTextNamePE;
 
-    TextView textViewUpcomingEventsPE, textViewPastEventsPE;
+    TextView textViewUpcomingEventsPE, textViewPastEventsPE,textViewNamePEOutput;
 
     Button buttonEventsPE, buttonInfoPE, buttonSignoutPE;
 
@@ -34,7 +34,7 @@ public class ProfileEventsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_events);
 
-        editTextNamePE = findViewById(R.id.editTextNamePE);
+        textViewNamePEOutput = findViewById(R.id.textViewNamePEOutput);
 
         textViewPastEventsPE = findViewById(R.id.textViewPastEventsPE);
         textViewUpcomingEventsPE = findViewById(R.id.textViewUpcomingEventsPE);
