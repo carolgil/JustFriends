@@ -10,18 +10,18 @@
         android:id="@+id/textViewUpcomingEventsPE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
         android:text="Upcoming Events"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonInfoPE" />
 
     <ImageButton
         android:id="@+id/imageButtonFavoritesPE"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="151dp"
-        android:layout_marginEnd="72dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="61dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePEOutput"
         app:srcCompat="@android:drawable/btn_star" />
@@ -30,20 +30,21 @@
         android:id="@+id/buttonEventsPE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="317dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="44dp"
         android:text="Events"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSignoutPE"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonFavoritesPE" />
+        app:layout_constraintStart_toEndOf="@+id/buttonInfoPE"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePEOutput" />
 
     <Button
         android:id="@+id/buttonInfoPE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="63dp"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="44dp"
         android:text="Info"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewProfilePE" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePEOutput" />
 
     <Button
         android:id="@+id/buttonSignoutPE"
@@ -70,37 +71,26 @@
         android:id="@+id/textViewNamePEOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="35dp"
-        android:layout_marginBottom="143dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="200dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEventsPE"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewProfilePE"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageViewProfilePE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="22dp"
-        android:layout_marginTop="37dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewPastEventsPE"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="119dp"
         android:layout_marginBottom="227dp"
         android:text="Past Events"
         app:layout_constraintBottom_toTopOf="@+id/main_nav"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewUpcomingEventsPE" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUpcomingEventsPE"
+        app:layout_constraintVertical_bias="0.515" />
 </androidx.constraintlayout.widget.ConstraintLayout>
