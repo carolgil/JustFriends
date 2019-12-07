@@ -24,10 +24,10 @@
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="283dp"
+        android:layout_marginTop="20dp"
         android:text="Interests"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducationPI" />
 
@@ -43,20 +43,9 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewOccupationPIOutput" />
 
     <TextView
-        android:id="@+id/textViewOccupationPIOutput"
-        android:layout_width="218dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="39dp"
-        android:layout_marginEnd="31dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewAgePIOutput" />
-
-    <TextView
         android:id="@+id/textViewAgePIOutput"
         android:layout_width="218dp"
-        android:layout_height="0dp"
+        android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="31dp"
         android:ems="10"
@@ -81,7 +70,7 @@
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
-        android:text="AGE"
+        android:text="Date of Birth"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGenderPI" />
 
@@ -90,13 +79,24 @@
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
         android:text="Occupation"
         app:layout_constraintEnd_toStartOf="@+id/textViewOccupationPIOutput"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDOBPI" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewHometownPI" />
+
+    <TextView
+        android:id="@+id/textViewOccupationPIOutput"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHometownPIOutput" />
 
     <Button
         android:id="@+id/buttonEventsPI"
@@ -104,6 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginTop="44dp"
+        android:layout_marginEnd="11dp"
         android:text="Events"
         app:layout_constraintEnd_toStartOf="@+id/imageButtonFavoritesPI"
         app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
@@ -114,12 +115,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="119dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="11dp"
         android:background="#A7A7A7"
         android:text="Info"
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="159dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
 
     <ImageButton
         android:id="@+id/imageButtonFavoritesPI"
@@ -136,77 +138,100 @@
         android:id="@+id/textViewNamePIOutput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="204dp"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonEditProfilePI"
         android:layout_width="66dp"
         android:layout_height="37dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="136dp"
         android:text="edit"
-        tools:layout_editor_absoluteX="284dp"
-        tools:layout_editor_absoluteY="87dp" />
-
-    <TextView
-        android:id="@+id/textViewGenderPI"
-        android:layout_width="103dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="25dp"
-        android:text="Gender"
-        app:layout_constraintEnd_toStartOf="@+id/textViewGenderPIOutput"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewNamePIOutput"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSignoutPI"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="161dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="34dp"
+        android:layout_width="116dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
         android:text="Sign out"
-        app:layout_constraintBottom_toTopOf="@+id/main_nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
+        app:layout_constraintStart_toEndOf="@+id/buttonEditProfilePI"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewGenderPIOutput"
         android:layout_width="218dp"
         android:layout_height="33dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="31dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
 
     <TextView
+        android:id="@+id/textViewGenderPI"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="25dp"
+        android:text="Gender"
+        app:layout_constraintEnd_toStartOf="@+id/textViewGenderPIOutput"
+        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
+
+    <TextView
         android:id="@+id/textViewInterest1Output"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toEndOf="@+id/textViewInterestsPI"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
 
     <TextView
-        android:id="@+id/textViewInterests2Output"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="125dp"
+        android:id="@+id/textViewInterest2Output"
+        android:layout_width="100dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
+
+    <TextView
+        android:id="@+id/textViewHometownPI"
+        android:layout_width="103dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:text="Hometown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDOBPI" />
+
+    <TextView
+        android:id="@+id/textViewHometownPIOutput"
+        android:layout_width="218dp"
+        android:layout_height="33dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="31dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAgePIOutput" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

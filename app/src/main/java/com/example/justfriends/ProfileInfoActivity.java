@@ -1,6 +1,7 @@
 package com.example.justfriends;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -16,12 +17,19 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ProfileInfoActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView mMainNav;
 
-    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput;
+    TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput, textViewHometownPI, textViewHometownPIOutput, textViewInterest1Output, textViewInterest2Output;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
     ImageView imageViewProfilePI;
     ImageButton imageButtonFavoritesPI;
@@ -48,6 +56,14 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         textViewOccupationPI = findViewById(R.id.textViewOccupationPI);
         textViewGenderPI = findViewById(R.id.textViewGenderPI);
 
+        //YK: Adding Hometown
+        textViewHometownPIOutput = findViewById(R.id.textViewHometownPIOutput);
+        textViewHometownPI = findViewById(R.id.textViewHometownPI);
+
+        //YK: Adding Interest Tags
+        textViewInterest1Output = findViewById(R.id.textViewInterest1Output);
+        textViewInterest2Output = findViewById(R.id.textViewInterest2Output);
+
         buttonEventsPI = findViewById(R.id.buttonEventsPI);
         buttonEditProfilePI = findViewById(R.id.buttonEditProfilePI);
         buttonInfoPI = findViewById(R.id.buttonInfoPI);
@@ -57,7 +73,6 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         // buttonEditProfilePI.setOnClickListener();
         // buttonInfoPI.setOnClickListener();
         // buttonSignoutPI.setOnClickListener();
-
 
 
         imageButtonFavoritesPI = findViewById(R.id.imageButtonFavoritesPI);
@@ -70,6 +85,65 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         buttonSignoutPI.setOnClickListener(this);
 
 
+        //YK: Pulling all the info + Reading from the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("Users");
+
+        //YK: Pulling user email
+        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+
+        //YK: Read from the database
+        myRef.orderByChild("email").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                User findUser = dataSnapshot.getValue(User.class);
+                String userGender = findUser.gender;
+                String userName = findUser.name;
+                Integer userAge = findUser.age;
+                String userEducation = findUser.education;
+                String userHometown = findUser.hometown;
+                String userOccupation = findUser.occupation;
+                String userInterest1 = findUser.interest1;
+                String userInterest2 = findUser.interest2;
+
+                //YK: Populate textViews
+                textViewGenderPIOutput.setText(userGender);
+                textViewNamePIOutput.setText(userName);
+                textViewAgePIOutput.setText(String.valueOf(userAge));
+                textViewEducationPIOutput.setText(userEducation);
+                textViewHometownPIOutput.setText(userHometown);
+                textViewOccupationPIOutput.setText(userOccupation);
+                textViewInterest1Output.setText(userInterest1);
+                textViewInterest2Output.setText(userInterest2);
+
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+
+        });
     }
 
 
@@ -114,9 +188,6 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
             Toast.makeText(this, "You are already on the info page!", Toast.LENGTH_SHORT).show();
 
         }
-
-
-
 
 
     }
