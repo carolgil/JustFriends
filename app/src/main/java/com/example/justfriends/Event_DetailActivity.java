@@ -34,8 +34,7 @@ public class Event_DetailActivity extends AppCompatActivity implements ValueEven
 
     }
 
-    FirebaseDatabase database = FirebaseDatabase.getInstance();
-    DatabaseReference myRef2 = database.getReference("Events");
+
 
     @Override
     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
