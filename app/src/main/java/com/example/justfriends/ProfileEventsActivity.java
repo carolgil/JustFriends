@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -26,7 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class ProfileEventsActivity extends AppCompatActivity {
+public class ProfileEventsActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonEventsPE, buttonInfoPE, buttonEditProfilePE, buttonSignoutPE;
     TextView textViewNamePEOutput;
@@ -42,71 +43,89 @@ public class ProfileEventsActivity extends AppCompatActivity {
 
         buttonEventsPE = findViewById(R.id.buttonEventsPE);
         buttonInfoPE = findViewById(R.id.buttonInfoPE);
-        buttonEditProfilePE = findViewById(R.id.buttonSignoutPE);
+        buttonEditProfilePE = findViewById(R.id.buttonEditProfilePE);
         textViewNamePEOutput = findViewById(R.id.textViewNamePEOutput);
+        buttonSignoutPE = findViewById(R.id.buttonSignoutPE);
+
+        buttonEventsPE.setOnClickListener(this);
+        buttonInfoPE.setOnClickListener(this);
+        buttonEditProfilePE.setOnClickListener(this);
+        buttonSignoutPE.setOnClickListener(this);
 
         Events = new ArrayList<Event>();
         Event e = new Event("name", "location", "Dec 12", "time", "descr", "email", 26);
         Events.add(e);
 
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        final DatabaseReference myRef = database.getReference("Events");
-//
-//        //YK: Pulling user email
-//        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-//
-//        //YK: Read from the database
-//
-//        myRef.orderByChild("email").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
-//
-//            @Override
-//            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//                Event findEvent = dataSnapshot.getValue(Event.class);
-//                String userGender = findUser.gender;
-//                String userName = findUser.name;
-//                Integer userAge = findUser.age;
-//                String userEducation = findUser.education;
-//                String userHometown = findUser.hometown;
-//                String userOccupation = findUser.occupation;
-//                String userInterest1 = findUser.interest1;
-//                String userInterest2 = findUser.interest2;
-//                Event e =
-//                Events.add(Event())
-//
-//
-//            }
-//
-//            @Override
-//            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//
-//
-//        });
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("Users");
+
+        //YK: Pulling user email
+        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+        //YK: Read from the database
+
+        myRef.orderByChild("email").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                User findUser = dataSnapshot.getValue(User.class);
+                String name = findUser.name;
+
+
+                //YK: Populate textViews
+                textViewNamePEOutput.setText(name);
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+
+        });
 
 
 
-//        String eventName, String eventLocation, String eventDate, String eventTime, String eventDescription, String eventCreator, int eventCap
         recycler_view = findViewById(R.id.recycler_view); //Link recyclerview variable to xml
         RecyclerViewAdapter adapter = new RecyclerViewAdapter(Events, this); //Linking the adapter to recyclerView,
         //check out the RecyclerViewAdapter (this is the hard part)
         recycler_view.setAdapter(adapter);
         recycler_view.setLayoutManager(new LinearLayoutManager(this)); //Setting the layout manager, commonly used is linear
+    }
+
+    @Override
+    public void onClick(View view) {
+        //Making the buttons work
+
+        if (view == buttonSignoutPE) {
+            Intent logoutIntent = new Intent(this, MainActivity.class);
+            startActivity(logoutIntent);
+        }
+
+        if (view == buttonInfoPE) {
+            Intent infoIntent = new Intent(this, ProfileInfoActivity.class);
+            startActivity(infoIntent);
+        }
+
+        if (view == buttonEventsPE) {
+            Toast.makeText(this, "You are already on the events page!", Toast.LENGTH_SHORT).show();
+
+        }
     }
 }
