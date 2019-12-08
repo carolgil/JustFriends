@@ -18,8 +18,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class ProfileEventsActivity extends AppCompatActivity {
 
 
-    EditText editTextNamePE;
-
     TextView textViewUpcomingEventsPE, textViewPastEventsPE,textViewNamePEOutput;
 
     Button buttonEventsPE, buttonInfoPE, buttonSignoutPE;
@@ -44,9 +42,7 @@ public class ProfileEventsActivity extends AppCompatActivity {
         buttonSignoutPE = findViewById(R.id.buttonSignoutPE);
 
         imageButtonFavoritesPE = findViewById(R.id.imageButtonFavoritesPE);
-
-        imageViewProfilePE = findViewById(R.id.imageViewProfilePE);
-
+        
 
     }
 }
