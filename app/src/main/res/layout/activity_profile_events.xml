@@ -7,6 +7,19 @@
     tools:context=".ProfileEventsActivity">
 
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:state_checked="true"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_items" />
+
     <Button
         android:id="@+id/buttonEventsPE"
         android:layout_width="wrap_content"
@@ -57,6 +70,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="431dp"
+        android:layout_height="451dp"
         android:layout_marginTop="130dp" />
 </RelativeLayout>

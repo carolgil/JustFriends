@@ -27,10 +27,10 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class ProfileEventsActivity extends AppCompatActivity implements View.OnClickListener {
+public class ProfileEventsActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
     Button buttonEventsPE, buttonInfoPE, buttonEditProfilePE, buttonSignoutPE;
-
+    private BottomNavigationView mMainv;
     private ArrayList<Event> Events;
     private RecyclerView recycler_view; //recycler view variable
     private RecyclerView.LayoutManager layoutManager; //layout manager for recycler view, need this for a recyclerview
@@ -39,7 +39,9 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_events);
-
+        mMainv = findViewById(R.id.main_nav);
+        mMainv.setOnNavigationItemSelectedListener(this);
+        
         buttonEventsPE = findViewById(R.id.buttonEventsPE);
         buttonInfoPE = findViewById(R.id.buttonInfoPE);
         buttonEditProfilePE = findViewById(R.id.buttonEditProfilePE);
@@ -114,9 +116,30 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
 
         });
 
-
-
     }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        if (menuItem.getItemId() == R.id.home_nav) {
+            Intent landingsIntent = new Intent(ProfileEventsActivity.this, FeedActivity.class);
+            startActivity(landingsIntent);
+            return true;
+
+        } else if (menuItem.getItemId() == R.id.profile_nav) {
+
+            Intent profileIntent = new Intent(ProfileEventsActivity.this, ProfileInfoActivity.class);
+            startActivity(profileIntent);
+            return true;
+
+        } else if (menuItem.getItemId() == R.id.create_nav) {
+            Intent chatIntent = new Intent(ProfileEventsActivity.this, CreateEventActivity.class);
+            startActivity(chatIntent);
+            return true;
+
+        }
+        return true;
+    }
+
 
     @Override
     public void onClick(View view) {
