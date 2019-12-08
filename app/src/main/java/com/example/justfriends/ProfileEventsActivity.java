@@ -42,7 +42,7 @@ public class ProfileEventsActivity extends AppCompatActivity {
         buttonSignoutPE = findViewById(R.id.buttonSignoutPE);
 
         imageButtonFavoritesPE = findViewById(R.id.imageButtonFavoritesPE);
-        
+
 
     }
 }
