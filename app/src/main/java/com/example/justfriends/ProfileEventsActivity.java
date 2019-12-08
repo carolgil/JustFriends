@@ -77,10 +77,17 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
                 String eventCreator = findEvent.eventCreator;
                 Integer eventCap = findEvent.eventCap;
 
+
+
                 Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap);
 
                 Events.add(e);
-                Toast.makeText(ProfileEventsActivity.this, Events.get(0).eventName, Toast.LENGTH_SHORT).show();
+
+                recycler_view = findViewById(R.id.recycler_view); //Link recyclerview variable to xml
+                RecyclerViewAdapter adapter = new RecyclerViewAdapter(Events, ProfileEventsActivity.this); //Linking the adapter to recyclerView,
+                //check out the RecyclerViewAdapter (this is the hard part)
+                recycler_view.setAdapter(adapter);
+                recycler_view.setLayoutManager(new LinearLayoutManager(ProfileEventsActivity.this)); //Setting the layout manager, commonly used is linear
 
             }
 
@@ -108,11 +115,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         });
 
 
-        recycler_view = findViewById(R.id.recycler_view); //Link recyclerview variable to xml
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(Events, this); //Linking the adapter to recyclerView,
-        //check out the RecyclerViewAdapter (this is the hard part)
-        recycler_view.setAdapter(adapter);
-        recycler_view.setLayoutManager(new LinearLayoutManager(this)); //Setting the layout manager, commonly used is linear
+
     }
 
     @Override
