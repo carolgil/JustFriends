@@ -102,9 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="11dp"
         android:text="Events"
-        app:layout_constraintEnd_toStartOf="@+id/imageButtonFavoritesPI"
         app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
 
@@ -120,17 +118,6 @@
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
-
-    <ImageButton
-        android:id="@+id/imageButtonFavoritesPI"
-        android:layout_width="33dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="61dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonEventsPI"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput"
-        app:srcCompat="@android:drawable/btn_star" />
 
     <TextView
         android:id="@+id/textViewNamePIOutput"

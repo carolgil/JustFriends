@@ -7,7 +7,69 @@
     tools:context=".ProfileEventsActivity">
 
 
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/main_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:state_checked="true"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_items" />
+
+    <Button
+        android:id="@+id/buttonEventsPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="70dp"
+        android:background="#A7A7A7"
+        android:text="Events"
+        app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
+
+    <Button
+        android:id="@+id/buttonInfoPE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="11dp"
+        android:text="Info"
+        app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
+
+    <Button
+        android:id="@+id/buttonEditProfilePE"
+        android:layout_width="66dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="136dp"
+        android:text="edit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewNamePIOutput"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSignoutPE"
+        android:layout_width="116dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="Sign out"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonEditProfilePI"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="451dp"
+        android:layout_marginTop="130dp" />
 </RelativeLayout>

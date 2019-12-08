@@ -27,12 +27,11 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ProfileInfoActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
+
     private BottomNavigationView mMainNav;
 
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput, textViewHometownPI, textViewHometownPIOutput, textViewInterest1Output, textViewInterest2Output;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
-    ImageView imageViewProfilePI;
-    ImageButton imageButtonFavoritesPI;
 
 
     @Override
@@ -74,8 +73,6 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         // buttonInfoPI.setOnClickListener();
         // buttonSignoutPI.setOnClickListener();
 
-
-        imageButtonFavoritesPI = findViewById(R.id.imageButtonFavoritesPI);
 
 
         //Set Listener
