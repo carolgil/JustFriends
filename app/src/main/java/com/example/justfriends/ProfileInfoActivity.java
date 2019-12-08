@@ -27,6 +27,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class ProfileInfoActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
+
     private BottomNavigationView mMainNav;
 
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput, textViewHometownPI, textViewHometownPIOutput, textViewInterest1Output, textViewInterest2Output;

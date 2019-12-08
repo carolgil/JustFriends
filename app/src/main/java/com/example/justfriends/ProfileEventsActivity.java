@@ -30,7 +30,6 @@ import java.util.ArrayList;
 public class ProfileEventsActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button buttonEventsPE, buttonInfoPE, buttonEditProfilePE, buttonSignoutPE;
-    TextView textViewNamePEOutput;
 
     private ArrayList<Event> Events;
     private RecyclerView recycler_view; //recycler view variable
@@ -44,7 +43,6 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         buttonEventsPE = findViewById(R.id.buttonEventsPE);
         buttonInfoPE = findViewById(R.id.buttonInfoPE);
         buttonEditProfilePE = findViewById(R.id.buttonEditProfilePE);
-        textViewNamePEOutput = findViewById(R.id.textViewNamePEOutput);
         buttonSignoutPE = findViewById(R.id.buttonSignoutPE);
 
         buttonEventsPE.setOnClickListener(this);
@@ -53,27 +51,36 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         buttonSignoutPE.setOnClickListener(this);
 
         Events = new ArrayList<Event>();
-        Event e = new Event("name", "location", "Dec 12", "time", "descr", "email", 26);
-        Events.add(e);
+//        Event e = new Event("name", "location", "Dec 12", "time", "descr", "email", 26);
+//        Events.add(e);
 
+
+        //YK: Pulling all the info + Reading from the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("Users");
+        final DatabaseReference myRef = database.getReference("Events");
 
         //YK: Pulling user email
         String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
         //YK: Read from the database
-
-        myRef.orderByChild("email").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+        myRef.orderByChild("eventCreator").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
 
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                User findUser = dataSnapshot.getValue(User.class);
-                String name = findUser.name;
+                Event findEvent = dataSnapshot.getValue(Event.class);
+                String eventName = findEvent.eventName;
+                Toast.makeText(ProfileEventsActivity.this, eventName, Toast.LENGTH_SHORT).show();
+                String eventLocation = findEvent.eventLocation;
+                String eventDate = findEvent.eventDate;
+                String eventTime = findEvent.eventTime;
+                String eventDescription = findEvent.eventDescription;
+                String eventCreator = findEvent.eventCreator;
+                Integer eventCap = findEvent.eventCap;
 
+                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap);
 
-                //YK: Populate textViews
-                textViewNamePEOutput.setText(name);
+                Events.add(e);
+                Toast.makeText(ProfileEventsActivity.this, Events.get(0).eventName, Toast.LENGTH_SHORT).show();
 
             }
 
@@ -99,7 +106,6 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
 
 
         });
-
 
 
         recycler_view = findViewById(R.id.recycler_view); //Link recyclerview variable to xml
