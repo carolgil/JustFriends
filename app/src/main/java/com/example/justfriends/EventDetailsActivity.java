@@ -2,6 +2,7 @@ package com.example.justfriends;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.CheckBox;
 import android.widget.Switch;
@@ -37,5 +38,24 @@ public class EventDetailsActivity extends AppCompatActivity {
 
         //Initializing Switch
         // switchEDGoing = findViewById(R.id.switchEDGoing);
+
+        Intent i = getIntent();
+        String eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap;
+        eventName = i.getStringExtra(eventName);
+        eventLocation = i.getStringExtra(eventLocation);
+        eventDate = i.getStringExtra(eventDate);
+        eventTime = i.getStringExtra(eventTime);
+        eventDescription = i.getStringExtra(eventDescription);
+        eventCap = i.getStringExtra(eventCap);
+
+        textViewEDEventName.setText(eventName);
+        textViewEDDate.setText(eventDate);
+        textViewEDTime.setText(eventTime);
+        textViewEDLocation.setText(eventLocation);
+        textViewEDDetails.setText("Details");
+        textViewEDDetailsBox.setText(eventDescription);
+        textViewEDNumGoing.setText(eventCap);
+
     }
+
 }
