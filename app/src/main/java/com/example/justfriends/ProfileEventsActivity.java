@@ -78,7 +78,6 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
                 String eventTag = findEvent.eventInterest;
 
 
-
                 Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag);
 
                 Events.add(e);
@@ -144,6 +143,8 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         //Making the buttons work
 
         if (view == buttonSignoutPE) {
+            FirebaseAuth.getInstance().signOut();
+            finish();
             Intent logoutIntent = new Intent(this, MainActivity.class);
             startActivity(logoutIntent);
         }
