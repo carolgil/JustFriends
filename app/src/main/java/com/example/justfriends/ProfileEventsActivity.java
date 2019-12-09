@@ -143,8 +143,6 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         //Making the buttons work
 
         if (view == buttonSignoutPE) {
-            FirebaseAuth.getInstance().signOut();
-            finish();
             Intent logoutIntent = new Intent(this, MainActivity.class);
             startActivity(logoutIntent);
         }

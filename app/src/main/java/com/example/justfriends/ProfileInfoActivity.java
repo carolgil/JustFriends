@@ -30,6 +30,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
 
     private BottomNavigationView mMainNav;
 
+
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput, textViewHometownPI, textViewHometownPIOutput, textViewInterest1Output, textViewInterest2Output;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
 
@@ -173,7 +174,6 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
 
         if (view == buttonSignoutPI) {
             FirebaseAuth.getInstance().signOut();
-            finish();
             Intent logoutIntent = new Intent(this, MainActivity.class);
             startActivity(logoutIntent);
         }
