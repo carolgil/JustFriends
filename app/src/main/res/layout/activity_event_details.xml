@@ -100,61 +100,34 @@
         android:text="Favorite"
         app:layout_constraintBottom_toTopOf="@+id/textViewEDDetailsBox"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewEDNumGoing"
         android:layout_width="116dp"
         android:layout_height="20dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="255dp"
+        android:layout_marginTop="48dp"
         android:text="Attendees"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textViewEDInterest1"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEDDetailsBox" />
-
-    <TextView
-        android:id="@+id/textViewEDInterests"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="236dp"
-        android:text="Tags"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textViewEDInterest1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDNumGoing" />
 
     <TextView
         android:id="@+id/textViewEDInterest1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
         android:layout_marginTop="12dp"
-        android:layout_marginEnd="31dp"
         android:layout_marginBottom="48dp"
         android:text="Interest 1"
         app:layout_constraintBottom_toTopOf="@+id/switchEDGoing"
-        app:layout_constraintEnd_toStartOf="@+id/textViewEDInterest2"
-        app:layout_constraintStart_toEndOf="@+id/textViewEDInterests"
         app:layout_constraintTop_toBottomOf="@+id/textViewEDNumGoing"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textViewEDInterest2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="48dp"
-        android:text="Interest 2"
-        app:layout_constraintBottom_toTopOf="@+id/switchEDGoing"
-        app:layout_constraintStart_toEndOf="@+id/textViewEDInterest1"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDDetailsBox" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:layout_editor_absoluteX="191dp" />
 
     <Switch
         android:id="@+id/switchEDGoing"

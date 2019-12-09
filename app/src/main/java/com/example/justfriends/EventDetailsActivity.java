@@ -28,33 +28,18 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewEDDetails = findViewById(R.id.textViewEDDetails);
         textViewEDDetailsBox = findViewById(R.id.textViewEDDetailsBox);
         textViewEDNumGoing = findViewById(R.id.textViewEDNumGoing);
-        textViewEDInterests = findViewById(R.id.textViewEDInterests);
         textViewEDInterest1 = findViewById(R.id.textViewEDInterest1);
-        textViewEDInterest2 = findViewById(R.id.textViewEDInterest2);
         textViewEDInterest3 = findViewById(R.id.textViewEDInterest3);
+
+        textViewEDEventName.setText(getIntent().getExtras().getString("event name"));
+        textViewEDDate.setText(getIntent().getExtras().getString("event date"));
+        textViewEDInterest1.setText(getIntent().getExtras().getString("event tag"));
+        textViewEDLocation.setText(getIntent().getExtras().getString("event location"));
+        textViewEDTime.setText(getIntent().getExtras().getString("event time"));
 
         //Initializing Check Box
         checkBoxEDFavorite = findViewById(R.id.checkBoxEDFavorite);
 
-        //Initializing Switch
-        // switchEDGoing = findViewById(R.id.switchEDGoing);
-
-//        Intent i = getIntent();
-//        String eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap;
-//        eventName = i.getStringExtra(eventName);
-//        eventLocation = i.getStringExtra(eventLocation);
-//        eventDate = i.getStringExtra(eventDate);
-//        eventTime = i.getStringExtra(eventTime);
-//        eventDescription = i.getStringExtra(eventDescription);
-//        eventCap = i.getStringExtra(eventCap);
-//
-//        textViewEDEventName.setText(eventName);
-//        textViewEDDate.setText(eventDate);
-//        textViewEDTime.setText(eventTime);
-//        textViewEDLocation.setText(eventLocation);
-//        textViewEDDetails.setText("Details");
-//        textViewEDDetailsBox.setText(eventDescription);
-//        textViewEDNumGoing.setText(eventCap);
 
     }
     

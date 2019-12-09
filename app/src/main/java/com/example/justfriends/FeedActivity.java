@@ -46,7 +46,7 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("Events");
 
-//how itents pass data n pass event id.
+//how intents pass data n pass event id.
         //YK: Read from the database
         myRef.addChildEventListener(new ChildEventListener() {
             @Override

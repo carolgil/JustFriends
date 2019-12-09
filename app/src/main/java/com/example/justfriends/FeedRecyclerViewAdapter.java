@@ -38,7 +38,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         holder.View_Feed_Name.setText(events.get(position).eventName);
         holder.View_Feed_Location.setText(events.get(position).eventLocation);
         holder.View_Feed_Time.setText(events.get(position).eventTime);
@@ -48,7 +48,19 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
+                String eventName = events.get(position).eventName;
+                String eventTime = events.get(position).eventTime;
+                String eventLocation = events.get(position).eventLocation;
+                String eventTag = events.get(position).eventInterest;
+                String eventDate = events.get(position).eventDate;
+
+
                 Intent intent = new Intent(context, EventDetailsActivity.class);
+                intent.putExtra("event name",eventName);
+                intent.putExtra("event time",eventTime);
+                intent.putExtra("event date",eventDate);
+                intent.putExtra("event location",eventLocation);
+                intent.putExtra("event tag",eventTag);
                 context.startActivity(intent);
             }
         });
