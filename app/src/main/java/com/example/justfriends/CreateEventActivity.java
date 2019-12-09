@@ -69,8 +69,10 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
             String time = editTextCreateEventTime.getText().toString();
             String description = editTextCreateEventDescription.getText().toString();
             int cap = Integer.parseInt(editTextCreateEventCap.getText().toString());
+            String interestTag = spinnerEventTag.getSelectedItem().toString();
 
-            Event myEvent  = new Event(name, location, date, time, description, creator, cap);
+
+            Event myEvent  = new Event(name, location, date, time, description, creator, cap, interestTag);
             myRef2.push().setValue(myEvent);
 
             Intent feedIntent = new Intent(CreateEventActivity.this, FeedActivity.class);

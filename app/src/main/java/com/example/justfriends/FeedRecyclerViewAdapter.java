@@ -43,6 +43,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         holder.View_Feed_Location.setText(events.get(position).eventLocation);
         holder.View_Feed_Time.setText(events.get(position).eventTime);
         holder.View_Feed_Date.setText(events.get(position).eventDate);
+        holder.edit_Interest_Tag.setText(events.get(position).eventInterest);
         holder.LinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -60,7 +61,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView View_Feed_Name, View_Feed_Date, View_Feed_Time, View_Feed_Location,
-                View_Feed_Att, View_Event_Filter;
+                View_Feed_Att, View_Event_Filter, edit_Interest_Tag;
         Button Event_Button_Favourite, Event_Details;
         RelativeLayout Feed_Relative;
         public LinearLayout LinearLayout;
@@ -75,6 +76,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
             Event_Button_Favourite = itemView.findViewById(R.id.Event_Button_Favourite);
             Feed_Relative = itemView.findViewById(R.id.Feed_Relative);
             LinearLayout = itemView.findViewById(R.id.LinearLayout);
+            edit_Interest_Tag = itemView.findViewById(R.id.edit_Interest_Tag);
 
         }
 

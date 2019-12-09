@@ -63,6 +63,7 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
                 String EventDescription = findEvent.eventDescription;
                 String EventCreator = findEvent.eventCreator;
                 Integer EventCap = findEvent.eventCap;
+                String EventTag = findEvent.eventInterest;
 
                 recyclerView = findViewById(R.id.Feed_RecyclerView); //Link recyclerview variable to xml
                 FeedRecyclerViewAdapter adapter = new FeedRecyclerViewAdapter(events, FeedActivity.this); //Linking the adapter to recyclerView,
@@ -71,7 +72,7 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
                 recyclerView.setLayoutManager(new LinearLayoutManager(FeedActivity.this)); //Setting the layout manager, commonly used is linear
 
 
-                Event e = new Event(EventName, EventLocation, EventDate, EventTime, EventDescription, EventCreator, EventCap);
+                Event e = new Event(EventName, EventLocation, EventDate, EventTime, EventDescription, EventCreator, EventCap, EventTag);
 
                 events.add(e);
             }

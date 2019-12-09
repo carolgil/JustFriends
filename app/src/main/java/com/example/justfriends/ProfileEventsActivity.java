@@ -41,7 +41,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_profile_events);
         mMainv = findViewById(R.id.main_nav);
         mMainv.setOnNavigationItemSelectedListener(this);
-        
+
         buttonEventsPE = findViewById(R.id.buttonEventsPE);
         buttonInfoPE = findViewById(R.id.buttonInfoPE);
         buttonEditProfilePE = findViewById(R.id.buttonEditProfilePE);
@@ -79,10 +79,11 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
                 String eventDescription = findEvent.eventDescription;
                 String eventCreator = findEvent.eventCreator;
                 Integer eventCap = findEvent.eventCap;
+                String eventTag = findEvent.eventInterest;
 
 
 
-                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap);
+                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag);
 
                 Events.add(e);
 
