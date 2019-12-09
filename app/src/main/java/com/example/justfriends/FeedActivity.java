@@ -46,11 +46,9 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("Events");
 
-        //YK: Pulling user email
-        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
-
+//how itents pass data n pass event id.
         //YK: Read from the database
-        myRef.orderByChild("eventCreator").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+        myRef.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
