@@ -57,5 +57,6 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewEDNumGoing.setText(eventCap);
 
     }
+    
 
 }
