@@ -88,7 +88,6 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
             View_Feed_Date = itemView.findViewById(R.id.View_Feed_Date);
             View_Feed_Time = itemView.findViewById(R.id.View_Feed_Time);
             View_Feed_Location = itemView.findViewById(R.id.View_Feed_Location);
-            Event_Button_Favourite = itemView.findViewById(R.id.Event_Button_Favourite);
             Feed_Relative = itemView.findViewById(R.id.Feed_Relative);
             LinearLayout = itemView.findViewById(R.id.LinearLayout);
             edit_Interest_Tag = itemView.findViewById(R.id.edit_Interest_Tag);

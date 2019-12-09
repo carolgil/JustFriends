@@ -55,19 +55,17 @@
         android:text="Interest"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/Event_Button_Favourite"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:text="Favourite"
-        android:textSize="8sp" />
-
     <LinearLayout
         android:id="@+id/LinearLayout"
         android:layout_width="364dp"
         android:layout_height="231dp"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="vertical">
 
+        <View
+            android:id="@+id/feedSeparator"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+    </LinearLayout>
 
 </RelativeLayout>

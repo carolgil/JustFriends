@@ -48,5 +48,11 @@
         android:text="Interest"
         android:textSize="18sp" />
 
+    <View
+        android:id="@+id/feedSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
 
 </RelativeLayout>
