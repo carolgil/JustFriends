@@ -44,6 +44,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         holder.View_Feed_Time.setText(events.get(position).eventTime);
         holder.View_Feed_Date.setText(events.get(position).eventDate);
         holder.edit_Interest_Tag.setText(events.get(position).eventInterest);
+
         holder.LinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +54,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
                 String eventLocation = events.get(position).eventLocation;
                 String eventTag = events.get(position).eventInterest;
                 String eventDate = events.get(position).eventDate;
+                String eventDetails = events.get(position).eventDescription;
 
 
                 Intent intent = new Intent(context, EventDetailsActivity.class);
@@ -61,6 +63,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
                 intent.putExtra("event date",eventDate);
                 intent.putExtra("event location",eventLocation);
                 intent.putExtra("event tag",eventTag);
+                intent.putExtra("event details", eventDetails);
                 context.startActivity(intent);
             }
         });
@@ -89,6 +92,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
             Feed_Relative = itemView.findViewById(R.id.Feed_Relative);
             LinearLayout = itemView.findViewById(R.id.LinearLayout);
             edit_Interest_Tag = itemView.findViewById(R.id.edit_Interest_Tag);
+
 
         }
 
