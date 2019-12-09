@@ -1,155 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/relativeLayout2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FeedActivity">
 
-
-    <FrameLayout
-        android:id="@+id/Layout"
-        android:layout_width="381dp"
-        android:layout_height="586dp"
-        app:layout_constraintBottom_toTopOf="@+id/main_nav"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-    </FrameLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/Feed_RecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="451dp"
+        android:layout_above="@+id/main_nav"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="94dp" />>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp"
+        android:state_checked="true"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/nav_items"
-        app:labelVisibilityMode="labeled"
-        android:state_checked="true"/>
+        app:menu="@menu/nav_items" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 
-
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="385dp"
-        android:layout_height="248dp"
-        android:layout_marginTop="176dp"
-        android:background="#E9E9E9"
-        android:outlineProvider="bounds"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TextView
-            android:id="@+id/View_Feed_Name"
-            android:layout_width="200dp"
-            android:layout_height="70dp"
-            android:outlineProvider="bounds"
-            android:singleLine="false"
-            android:text="Event Name"
-            android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/View_Feed_Date"
-            android:layout_width="155dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="70dp"
-            android:outlineProvider="bounds"
-            android:text="Date"
-            android:textSize="18sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/View_Feed_Time"
-            android:layout_width="155dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="155dp"
-            android:layout_marginLeft="155dp"
-            android:layout_marginTop="70dp"
-            android:outlineProvider="bounds"
-            android:text="Time"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/View_Feed_Location"
-            android:layout_width="155dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="130dp"
-            android:outlineProvider="bounds"
-            android:text="Location"
-            android:textSize="18sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/View_Feed_Att"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginStart="270dp"
-            android:layout_marginLeft="200dp"
-            android:layout_marginTop="150dp"
-            android:outlineProvider="bounds"
-            android:text="#ATT"
-            android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/edit_Interest_Tag"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="210dp"
-            android:text="Interest"
-            android:textSize="18sp"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/Event_Button_Favourite"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300dp"
-            android:text="Favourite"
-            android:textSize="9sp" />
-
-        <Button
-            android:id="@+id/Event_Details"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="300sp"
-            android:layout_marginTop="200sp"
-            android:text="Details"
-            android:textSize="9sp" />
-
-    </FrameLayout>
-
-    <TextView
-        android:id="@+id/View_Feed_Home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="69dp"
-        android:layout_marginEnd="92dp"
-        android:text="Welcome To JustFriends"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/View_Event_Filter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Filter"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="5dp"
-        tools:layout_editor_absoluteY="145dp" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

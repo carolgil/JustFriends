@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/Feed_Relative"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/View_Feed_Name"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:outlineProvider="bounds"
+        android:singleLine="false"
+        android:text="Event Name"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/View_Feed_Date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:outlineProvider="bounds"
+        android:text="Date"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/View_Feed_Time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="70dp"
+        android:outlineProvider="bounds"
+        android:text="Time"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/View_Feed_Location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:outlineProvider="bounds"
+        android:text="Location"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/edit_Interest_Tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="170dp"
+        android:text="Interest"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/Event_Button_Favourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="250dp"
+        android:text="Favourite"
+        android:textSize="8sp" />
+
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="364dp"
+        android:layout_height="231dp"
+        android:orientation="vertical"></LinearLayout>
+
+
+</RelativeLayout>

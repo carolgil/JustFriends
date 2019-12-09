@@ -69,6 +69,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
 
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
                 Event findEvent = dataSnapshot.getValue(Event.class);
                 String eventName = findEvent.eventName;
                 Toast.makeText(ProfileEventsActivity.this, eventName, Toast.LENGTH_SHORT).show();

@@ -1,48 +1,106 @@
 package com.example.justfriends;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.FrameLayout;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
-public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener,View.OnClickListener {
+import java.util.ArrayList;
+
+public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView mMainNav;
-    private FrameLayout mMainFrame;
+    private ArrayList<Event> events;
+    private RecyclerView recyclerView;
+    private RecyclerView.LayoutManager layoutManager;
 
 
-    TextView View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
-            View_Feed_Att, View_Event_Filter;
     Button Event_Button_Favourite,Event_Details;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+
+        protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
-        View_Feed_Att = findViewById(R.id.View_Feed_Att);
-        View_Feed_Name = findViewById(R.id.View_Feed_Name);
-        View_Feed_Date = findViewById(R.id.View_Feed_Date);
-        View_Feed_Time = findViewById(R.id.View_Feed_Time);
-        View_Feed_Location = findViewById(R.id.View_Feed_Location);
-        Event_Button_Favourite = findViewById(R.id.Event_Button_Favourite);
-        Event_Details = findViewById(R.id.Event_Details);
-        View_Event_Filter = findViewById(R.id.View_Event_Filter);
 
 
-        Event_Button_Favourite.setOnClickListener(this);
-        Event_Details.setOnClickListener(this);
+        events = new ArrayList<Event>();
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("Events");
+
+        //YK: Pulling user email
+        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+        //YK: Read from the database
+        myRef.orderByChild("eventCreator").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                Event findEvent = dataSnapshot.getValue(Event.class);
+                String EventName = findEvent.eventName;
+                Toast.makeText(FeedActivity.this, EventName, Toast.LENGTH_SHORT).show();
+                String EventLocation = findEvent.eventLocation;
+                String EventDate = findEvent.eventDate;
+                String EventTime = findEvent.eventTime;
+                String EventDescription = findEvent.eventDescription;
+                String EventCreator = findEvent.eventCreator;
+                Integer EventCap = findEvent.eventCap;
+
+                recyclerView = findViewById(R.id.Feed_RecyclerView); //Link recyclerview variable to xml
+                FeedRecyclerViewAdapter adapter = new FeedRecyclerViewAdapter(events, FeedActivity.this); //Linking the adapter to recyclerView,
+                //check out the RecyclerViewAdapter (this is the hard part)
+                recyclerView.setAdapter(adapter);
+                recyclerView.setLayoutManager(new LinearLayoutManager(FeedActivity.this)); //Setting the layout manager, commonly used is linear
+
+
+                Event e = new Event(EventName, EventLocation, EventDate, EventTime, EventDescription, EventCreator, EventCap);
+
+                events.add(e);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+
+
 
 
         mMainNav.setOnNavigationItemSelectedListener(this);
@@ -71,14 +129,5 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
             return true;
         }
         return true;
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (Event_Details == view){
-            Intent chatIntent = new Intent(FeedActivity.this, Event_DetailActivity.class);
-            startActivity(chatIntent);
-        }
-
     }
 }
