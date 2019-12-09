@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if (view == buttonLogIn) {
             loginUser(editTextEmail.getText().toString(), editTextPassword.getText().toString());
-            String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
             Intent landingsIntent = new Intent(this, FeedActivity.class);
             startActivity(landingsIntent);
         }
