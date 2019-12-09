@@ -22,17 +22,17 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
 
     private ArrayList<Event> events;
     private Context mContext;
-    private OnNoteListener mOnNoteListener;
-    FeedRecyclerViewAdapter(ArrayList<Event> events, Context mContext){
+
+    FeedRecyclerViewAdapter(ArrayList<Event> events, Context mContext) {
         this.events = events;
         this.mContext = mContext;
-  //      this.mOnNoteListener = onNoteListener;
+        //      this.mOnNoteListener = onNoteListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.feed_layoutlist,parent,false
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.feed_layoutlist, parent, false
         );
         return new ViewHolder(view);
     }
@@ -58,12 +58,11 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         return events.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        TextView View_Feed_Name, View_Feed_Date, View_Feed_Time,View_Feed_Location,
-           View_Feed_Att, View_Event_Filter;
-         Button Event_Button_Favourite,Event_Details;
-         RelativeLayout Feed_Relative;
-         OnNoteListener onNoteListener;
+    public class ViewHolder extends RecyclerView.ViewHolder {
+        TextView View_Feed_Name, View_Feed_Date, View_Feed_Time, View_Feed_Location,
+                View_Feed_Att, View_Event_Filter;
+        Button Event_Button_Favourite, Event_Details;
+        RelativeLayout Feed_Relative;
         public LinearLayout LinearLayout;
 
         public ViewHolder(@NonNull View itemView) {
@@ -77,18 +76,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
             Feed_Relative = itemView.findViewById(R.id.Feed_Relative);
             LinearLayout = itemView.findViewById(R.id.LinearLayout);
 
-            this.onNoteListener = onNoteListener;
-            itemView.setOnClickListener(this);
-
         }
 
-        @Override
-        public void onClick(View view) {
-            onNoteListener.onNoteClick(getAdapterPosition());
-
-        }
     }
-        public interface OnNoteListener {
-        void onNoteClick(int position);
-        }
-    }
+}

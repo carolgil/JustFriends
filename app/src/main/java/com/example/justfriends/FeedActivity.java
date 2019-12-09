@@ -24,7 +24,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
-public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, FeedRecyclerViewAdapter.OnNoteListener {
+public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG ="Detail" ;
     private BottomNavigationView mMainNav;
@@ -130,13 +130,5 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
             return true;
         }
         return true;
-    }
-
-    @Override
-    public void onNoteClick(int position) {
-        Log.d(TAG, "onNoteClick: clicked.");
-        Intent landingsIntent = new Intent(this, EventDetailsActivity.class);
-        startActivity(landingsIntent);
-
     }
 }
