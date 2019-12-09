@@ -26,7 +26,6 @@ import java.util.ArrayList;
 
 public class FeedActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
-    private static final String TAG ="Detail" ;
     private BottomNavigationView mMainNav;
     private ArrayList<Event> events;
     private RecyclerView recyclerView;
