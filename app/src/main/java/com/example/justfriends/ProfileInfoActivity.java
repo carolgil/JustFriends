@@ -174,6 +174,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
 
         if (view == buttonSignoutPI) {
             FirebaseAuth.getInstance().signOut();
+            finish();
             Intent logoutIntent = new Intent(this, MainActivity.class);
             startActivity(logoutIntent);
         }

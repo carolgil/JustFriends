@@ -47,41 +47,8 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("Events");
 
-        final DatabaseReference myRef2 = database.getReference("Users");
-
-        //Pulling user email
-        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
 
-        myRef2.orderByChild("email").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                User findUser = dataSnapshot.getValue(User.class);
-                String userName = findUser.name;
-
-                textViewUserName.setText(userName);
-            }
-
-            @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
 
         myRef.addChildEventListener(new ChildEventListener() {
             @Override
