@@ -47,6 +47,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.textViewPEeventName.setText(Events.get(position).eventName);
         holder.textViewPEeventDate.setText(Events.get(position).eventDate);
         holder.textViewPEtime.setText(Events.get(position).eventTime);
+        holder.textViewPElocation.setText(Events.get(position).eventLocation);
+        holder.textViewPEInterestTag.setText(Events.get(position).eventInterest);
     }
 
     @Override
@@ -60,6 +62,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         TextView textViewPEeventName; //imageView from user_item
         TextView textViewPEeventDate; //textView from user_item
         TextView textViewPEtime;
+        TextView textViewPElocation;
+        TextView textViewPEInterestTag;
         RelativeLayout parent_layout; //references who the parent is and the specific layout of the parent,
         //so you know where the imageView and textView are contained
 
@@ -68,6 +72,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textViewPEeventName = itemView.findViewById(R.id.textViewPEeventName);
             textViewPEeventDate = itemView.findViewById(R.id.textViewPEeventDate);
             textViewPEtime = itemView.findViewById(R.id.textViewPEtime);
+            textViewPElocation = itemView.findViewById(R.id.textViewPElocation);
+            textViewPEInterestTag = itemView.findViewById(R.id.textViewPEInterestTag);
             parent_layout = itemView.findViewById(R.id.parent_layout);
         }
     }

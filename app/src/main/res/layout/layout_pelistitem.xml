@@ -6,19 +6,47 @@
     <TextView
         android:id="@+id/textViewPEeventName"
         android:layout_width="200dp"
-        android:layout_height="40dp" />
+        android:layout_height="70dp"
+        android:outlineProvider="bounds"
+        android:singleLine="false"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/textViewPEeventDate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/textViewPEeventName"
-        android:layout_margin="30dp" />
+        android:layout_marginTop="70dp"
+        android:outlineProvider="bounds"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/textViewPEtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/textViewPEeventDate" />
+        android:layout_marginStart="155dp"
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="70dp"
+        android:outlineProvider="bounds"
+        android:text="Time"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewPElocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:outlineProvider="bounds"
+        android:text="Location"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textViewPEInterestTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="170dp"
+        android:text="Interest"
+        android:textSize="18sp" />
+
 
 </RelativeLayout>

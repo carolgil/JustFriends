@@ -53,18 +53,15 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         buttonSignoutPE.setOnClickListener(this);
 
         Events = new ArrayList<Event>();
-//        Event e = new Event("name", "location", "Dec 12", "time", "descr", "email", 26);
-//        Events.add(e);
 
-
-        //YK: Pulling all the info + Reading from the database
+        //Pulling all the info + Reading from the database
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         final DatabaseReference myRef = database.getReference("Events");
 
-        //YK: Pulling user email
+        //Pulling user email
         String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
-        //YK: Read from the database
+        //Read from the database
         myRef.orderByChild("eventCreator").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
 
             @Override
@@ -72,7 +69,6 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
 
                 Event findEvent = dataSnapshot.getValue(Event.class);
                 String eventName = findEvent.eventName;
-                Toast.makeText(ProfileEventsActivity.this, eventName, Toast.LENGTH_SHORT).show();
                 String eventLocation = findEvent.eventLocation;
                 String eventDate = findEvent.eventDate;
                 String eventTime = findEvent.eventTime;
