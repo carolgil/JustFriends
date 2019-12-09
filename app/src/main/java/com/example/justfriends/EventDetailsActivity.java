@@ -36,6 +36,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewEDInterest1.setText(getIntent().getExtras().getString("event tag"));
         textViewEDLocation.setText(getIntent().getExtras().getString("event location"));
         textViewEDTime.setText(getIntent().getExtras().getString("event time"));
+        textViewEDDetailsBox.setText(getIntent().getExtras().getString("event details"));
 
         //Initializing Check Box
         checkBoxEDFavorite = findViewById(R.id.checkBoxEDFavorite);
