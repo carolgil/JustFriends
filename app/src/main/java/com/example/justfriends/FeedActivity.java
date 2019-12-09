@@ -54,7 +54,6 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
 
                 Event findEvent = dataSnapshot.getValue(Event.class);
                 String EventName = findEvent.eventName;
-                Toast.makeText(FeedActivity.this, EventName, Toast.LENGTH_SHORT).show();
                 String EventLocation = findEvent.eventLocation;
                 String EventDate = findEvent.eventDate;
                 String EventTime = findEvent.eventTime;
