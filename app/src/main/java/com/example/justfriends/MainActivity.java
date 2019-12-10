@@ -46,14 +46,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         if (view == buttonLogIn) {
-            loginUser(editTextEmail.getText().toString(), editTextPassword.getText().toString());
-            Intent landingsIntent = new Intent(this, FeedActivity.class);
-            startActivity(landingsIntent);
+            try {
+                loginUser(editTextEmail.getText().toString(), editTextPassword.getText().toString());
+                Intent landingsIntent = new Intent(this, FeedActivity.class);
+                startActivity(landingsIntent);
+            } catch (Exception e) {
+                Toast.makeText(this, "Please Enter Email and Password", Toast.LENGTH_SHORT).show();
+            }
         }
         else if (view == buttonRegister) {
-            makeNewUsers(editTextEmail.getText().toString(), editTextPassword.getText().toString());
-            Intent profileIntent = new Intent(this, CreateProfileActivity.class);
-            startActivity(profileIntent);
+            try {
+                makeNewUsers(editTextEmail.getText().toString(), editTextPassword.getText().toString());
+            } catch (Exception e) {
+                Toast.makeText(this, "Please Enter Email and Password", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
@@ -65,6 +71,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // display success message
+                            Intent mainIntent = new Intent(MainActivity.this, CreateProfileActivity.class);
+                            startActivity(mainIntent);
                             Toast.makeText(MainActivity.this, "User Registration Successful", Toast.LENGTH_SHORT).show();
 
 
