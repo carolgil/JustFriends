@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +33,9 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
     private RecyclerView recyclerView;
     private RecyclerView.LayoutManager layoutManager;
     TextView textViewUserName;
+    private FirebaseUser user;
+    private FirebaseAuth mAuth;
+
 
     Button Event_Button_Favourite,Event_Details;
 
@@ -41,11 +45,46 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
-
+//        user = mAuth.getCurrentUser();
+//        mAuth = FirebaseAuth.getInstance();
         textViewUserName = findViewById(R.id.textViewUserName);
+
+
+
         events = new ArrayList<Event>();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        final DatabaseReference myRef = database.getReference("Events");
+        DatabaseReference myRef = database.getReference("Events");
+ //       DatabaseReference myRef2 = database.getReference("Users");
+
+//        myRef2.addChildEventListener(new ChildEventListener() {
+//            @Override
+//            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//                User finduser = dataSnapshot.getValue(User.class);
+//
+//                String username = finduser.name;
+//                textViewUserName.setText(username);
+//            }
+//
+//            @Override
+//            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//
+//            }
+//
+//            @Override
+//            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+//
+//            }
+//
+//            @Override
+//            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+//
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//            }
+//        });
 
 
 

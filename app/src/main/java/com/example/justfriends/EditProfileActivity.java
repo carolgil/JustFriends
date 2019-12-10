@@ -24,6 +24,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
     EditText editTextEPName, editTextEPAge, editTextEPEducation, editTextEPHometown, editTextEPOccupation;
     Button buttonUpdateProfile;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,14 +43,18 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         editTextEPEducation = findViewById(R.id.editTextEPEducation);
         editTextEPHometown = findViewById(R.id.editTextEPHometown);
         editTextEPOccupation = findViewById(R.id.editTextEPOccupation);
+        buttonUpdateProfile = findViewById(R.id.buttonUpdateProfile);
+
+        user = mAuth.getCurrentUser();
+        String userID = user.getEmail().toString();
+
 
         buttonUpdateProfile.setOnClickListener(this);
 
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Users");
 
-        final FirebaseUser theUser = mAuth.getCurrentUser();
-        String userID = theUser.getEmail().toString();
+
 
         myRef.orderByChild("email").equalTo(userID).addChildEventListener(new ChildEventListener() {
             @Override

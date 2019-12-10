@@ -15,6 +15,7 @@
         <activity android:name=".ChatActivity" />
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".ProfileFavoritesActivity" />
+        <activity android:name=".EditProfileActivity" />
         <activity android:name=".ProfileEventsActivity" />
         <activity android:name=".ProfileInfoActivity" />
         <activity android:name=".MainActivity">
