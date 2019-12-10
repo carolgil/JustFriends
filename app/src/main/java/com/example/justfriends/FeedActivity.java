@@ -45,46 +45,48 @@ public class FeedActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feed);
         mMainNav = (BottomNavigationView) findViewById(R.id.main_nav);
-//        user = mAuth.getCurrentUser();
-//        mAuth = FirebaseAuth.getInstance();
+
+        mAuth = FirebaseAuth.getInstance();
+        user = mAuth.getCurrentUser();
         textViewUserName = findViewById(R.id.textViewUserName);
 
 
 
         events = new ArrayList<Event>();
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("Events");
- //       DatabaseReference myRef2 = database.getReference("Users");
+        DatabaseReference myRef2 = database.getReference("Users");
 
-//        myRef2.addChildEventListener(new ChildEventListener() {
-//            @Override
-//            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//                User finduser = dataSnapshot.getValue(User.class);
-//
-//                String username = finduser.name;
-//                textViewUserName.setText(username);
-//            }
-//
-//            @Override
-//            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//            }
-//
-//            @Override
-//            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-//
-//            }
-//
-//            @Override
-//            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-//
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError databaseError) {
-//
-//            }
-//        });
+        myRef2.orderByChild("email").equalTo(user.getEmail()).addChildEventListener(new ChildEventListener() {
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+
+                User finduser = dataSnapshot.getValue(User.class);
+                String username = finduser.name;
+                textViewUserName.setText(username);
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
 
 

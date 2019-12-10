@@ -31,7 +31,6 @@
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
-        android:text="sadutta@umich.edu"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLogo" />
@@ -70,7 +69,6 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:text="123456"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail" />
