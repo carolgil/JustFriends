@@ -10,14 +10,10 @@
         android:id="@+id/textViewAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="46dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
         android:text="Age"
         android:textAlignment="viewStart"
-        app:layout_constraintBottom_toTopOf="@+id/textViewGender"
-        app:layout_constraintEnd_toStartOf="@+id/editTextAge"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 
@@ -25,58 +21,42 @@
         android:id="@+id/editTextAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="97dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="34dp"
         android:ems="10"
         android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerGender"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewAge"
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
     <EditText
         android:id="@+id/editTextOccupation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="11dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerInterest1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewOccupationPI"
         app:layout_constraintTop_toBottomOf="@+id/editTextHometown" />
 
     <EditText
         android:id="@+id/editTextEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="9dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextHometown"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewEducation"
         app:layout_constraintTop_toBottomOf="@+id/spinnerGender" />
 
     <TextView
         android:id="@+id/textViewGender"
         android:layout_width="wrap_content"
         android:layout_height="19dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
         android:text="Gender"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEducation"
-        app:layout_constraintEnd_toStartOf="@+id/spinnerGender"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAge" />
 
@@ -84,13 +64,9 @@
         android:id="@+id/spinnerGender"
         android:layout_width="213dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEducation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewGender"
         app:layout_constraintTop_toBottomOf="@+id/editTextAge" />
 
     <Button
@@ -98,12 +74,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="125dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="125dp"
-        android:layout_marginBottom="66dp"
         android:text="Create Profile"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerInterest2" />
 
@@ -111,25 +86,19 @@
         android:id="@+id/textViewOccupationPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginBottom="33dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
         android:text="Occupation"
-        app:layout_constraintBottom_toTopOf="@+id/textViewInterests"
-        app:layout_constraintEnd_toStartOf="@+id/editTextOccupation"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHometown" />
 
     <TextView
         android:id="@+id/textViewEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="67dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
         android:text="Education"
-        app:layout_constraintBottom_toTopOf="@+id/textViewHometown"
-        app:layout_constraintEnd_toStartOf="@+id/editTextEducation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
 
@@ -138,75 +107,58 @@
         android:id="@+id/editTextHometown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextOccupation"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewHometown"
         app:layout_constraintTop_toBottomOf="@+id/editTextEducation" />
 
     <TextView
         android:id="@+id/textViewInterests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="187dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
         android:text="Interests"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewOccupationPI" />
 
     <Spinner
         android:id="@+id/spinnerInterest1"
         android:layout_width="213dp"
         android:layout_height="36dp"
-        android:layout_marginStart="74dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/spinnerInterest2"
+        android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewInterests"
         app:layout_constraintTop_toBottomOf="@+id/editTextOccupation" />
 
     <Spinner
         android:id="@+id/spinnerInterest2"
         android:layout_width="213dp"
         android:layout_height="36dp"
-        android:layout_marginStart="141dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonCreateProfile"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerInterest1" />
 
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="92dp"
         android:layout_marginEnd="28dp"
-        android:layout_marginBottom="12dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextAge"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/editTextEPAge"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewHometown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="40dp"
         android:text="Hometown"
-        app:layout_constraintBottom_toTopOf="@+id/textViewOccupationPI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducation" />
 
@@ -214,14 +166,10 @@
         android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginBottom="43dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
         android:text="Name"
         android:textAlignment="viewStart"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAge"
-        app:layout_constraintEnd_toStartOf="@+id/editTextName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
