@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Switch;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
@@ -28,7 +29,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_create_profile);
 
         editTextName = findViewById(R.id.editTextName);
-        editTextAge = findViewById(R.id.editTextEPAge);
+        editTextAge = findViewById(R.id.editTextAge);
         editTextEducation = findViewById(R.id.editTextEducation);
         editTextHometown = findViewById(R.id.editTextHometown);
         editTextOccupation = findViewById(R.id.editTextOccupation);
