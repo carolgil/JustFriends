@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".EditProfileActivity">
 
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="167dp"
+        android:layout_height="28dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="342dp" />
+
     <TextView
         android:id="@+id/textViewEPEditProfile"
         android:layout_width="wrap_content"
@@ -152,4 +159,20 @@
         android:text="Update Profile"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
+
+    <Spinner
+        android:id="@+id/spinnerEPGender"
+        android:layout_width="166dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="19dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPGender"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
+
+    <Spinner
+        android:id="@+id/spinner3"
+        android:layout_width="135dp"
+        android:layout_height="32dp"
+        tools:layout_editor_absoluteX="206dp"
+        tools:layout_editor_absoluteY="370dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -177,17 +177,20 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
             finish();
             Intent logoutIntent = new Intent(this, MainActivity.class);
             startActivity(logoutIntent);
-        }
-
-        if (view == buttonEventsPI) {
+        }else if (view == buttonEventsPI) {
             Intent eventIntent = new Intent(this, ProfileEventsActivity.class);
             startActivity(eventIntent);
-        }
-
-        if (view == buttonInfoPI) {
+        }else if (view == buttonInfoPI) {
             Toast.makeText(this, "You are already on the info page!", Toast.LENGTH_SHORT).show();
 
+        }else if (view == buttonEditProfilePI){
+            Intent editIntent = new Intent(this, EditProfileActivity.class);
+            startActivity(editIntent);
         }
+//        if (view == buttonEditProfilePI){
+//            Intent editIntent = new Intent(this, EditProfileActivity.class);
+//            startActivity(editIntent);
+//        }
 
 
     }

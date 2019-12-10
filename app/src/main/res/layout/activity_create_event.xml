@@ -200,4 +200,13 @@
         app:layout_constraintStart_toEndOf="@+id/textViewCreateEventTags"
         app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventDescription" />
 
+    <Spinner
+        android:id="@+id/spinnerCEInterests"
+        android:layout_width="220dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="18dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewCreateEventTags"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventDescription" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
