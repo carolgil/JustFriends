@@ -7,22 +7,25 @@
     tools:context=".EditProfileActivity">
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerEPInterest1"
         android:layout_width="167dp"
         android:layout_height="28dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPInterests"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
 
     <TextView
         android:id="@+id/textViewEPEditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="172dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="167dp"
         android:text="Edit Profile"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -30,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="48dp"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -97,10 +100,9 @@
 
     <EditText
         android:id="@+id/editTextEPName"
-        android:layout_width="159dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="33dp"
+        android:layout_width="170dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="64dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
@@ -109,50 +111,50 @@
 
     <EditText
         android:id="@+id/editTextEPEducation"
-        android:layout_width="160dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="166dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="37dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerEPGender" />
+        app:layout_constraintStart_toEndOf="@+id/textViewEPEducation"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
 
     <EditText
         android:id="@+id/editTextEPHometown"
-        android:layout_width="162dp"
-        android:layout_height="33dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="191dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPHometown"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPEducation" />
 
     <EditText
         android:id="@+id/editTextEPOccupation"
-        android:layout_width="164dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="194dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPOccupation"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPHometown" />
 
     <EditText
         android:id="@+id/editTextEPAge"
-        android:layout_width="85dp"
-        android:layout_height="31dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="119dp"
+        android:layout_width="92dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="79dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPAge"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPName" />
 
     <Button
@@ -160,26 +162,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="144dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="90dp"
         android:text="Update Profile"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
 
     <Spinner
         android:id="@+id/spinnerEPGender"
         android:layout_width="166dp"
         android:layout_height="25dp"
-        android:layout_marginTop="19dp"
-        android:layout_marginEnd="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="56dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPGender"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
 
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/spinnerEPInterest2"
         android:layout_width="135dp"
         android:layout_height="32dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="70dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2" />
+        android:layout_marginStart="47dp"
+        app:layout_constraintStart_toEndOf="@+id/textViewEPInterests"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEPInterest1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
