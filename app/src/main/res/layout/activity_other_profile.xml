@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".OtherProfileActivity">
 
     <TextView
@@ -12,7 +13,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="78dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Name"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -20,10 +23,16 @@
         android:id="@+id/textViewOPProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Creator's Profile"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="154dp" />
+        android:textColor="#FC030000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewOPAge"
@@ -31,7 +40,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Age"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOPName" />
 
@@ -41,7 +52,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Gender"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOPAge" />
 
@@ -51,7 +64,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Education"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOPGender" />
 
@@ -61,7 +76,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Hometown"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOPEducation" />
 
@@ -71,7 +88,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Occupation"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOPHometown" />
 
@@ -81,7 +100,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="52dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Interests"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOPOccupation" />
 
