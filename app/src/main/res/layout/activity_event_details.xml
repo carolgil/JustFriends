@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".EventDetailsActivity">
 
     <TextView
@@ -12,12 +13,9 @@
         android:layout_height="34dp"
         android:layout_marginStart="40dp"
         android:layout_marginTop="48dp"
-        android:layout_marginEnd="162dp"
-        android:layout_marginBottom="14dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Event Name"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEDLocation"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,12 +24,10 @@
         android:layout_width="353dp"
         android:layout_height="125dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginTop="12dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Details Box Blah Blah"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEDNumGoing"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEDDetails" />
 
@@ -39,13 +35,10 @@
         android:id="@+id/textViewEDLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="13dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="207dp"
-        android:layout_marginBottom="58dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Location"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEDDetailsBox"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textViewEDTime"
         app:layout_constraintTop_toBottomOf="@+id/textViewEDEventName" />
 
@@ -54,11 +47,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="14dp"
         android:layout_marginEnd="13dp"
-        android:layout_marginBottom="58dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Time"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEDDetails"
         app:layout_constraintEnd_toStartOf="@+id/textViewEDLocation"
         app:layout_constraintStart_toEndOf="@+id/textViewEDDate"
         app:layout_constraintTop_toBottomOf="@+id/textViewEDEventName" />
@@ -68,10 +60,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginEnd="301dp"
+        android:layout_marginTop="14dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Details"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEDTime" />
 
@@ -81,66 +72,44 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Date"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEDDetails"
-        app:layout_constraintEnd_toStartOf="@+id/textViewEDTime"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDEventName"
-        app:layout_constraintVertical_bias="0.457" />
-
-    <TextView
-        android:id="@+id/textViewEDNumGoing"
-        android:layout_width="116dp"
-        android:layout_height="20dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="48dp"
-        android:text="Attendees"
-        app:layout_constraintEnd_toStartOf="@+id/textViewEDInterest1"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDDetailsBox" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEDEventName" />
 
     <TextView
         android:id="@+id/textViewEDInterest1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="104dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Interest 1"
-        app:layout_constraintBottom_toTopOf="@+id/switchEDGoing"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDNumGoing"
-        app:layout_constraintVertical_bias="1.0"
-        tools:layout_editor_absoluteX="191dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEDDetailsBox" />
 
     <Switch
         android:id="@+id/switchEDGoing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="47dp"
-        android:layout_marginEnd="118dp"
-        android:layout_marginBottom="163dp"
-        android:text="Going"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="118dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="29dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:text="GOING"
+        android:textColor="#13462D"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDInterest1" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewEDInterest3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="326dp"
-        android:layout_marginBottom="71dp"
-        android:text="."
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="129dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="96dp"
+        android:fontFamily="@font/rubik_mono_one"
+        android:text="Interest 3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/switchEDGoing" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEDInterest1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

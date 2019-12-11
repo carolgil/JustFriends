@@ -38,7 +38,7 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewEDDetailsBox.setText(getIntent().getExtras().getString("event details"));
 
         //Initializing Check Box
-        
+
 
     }
     

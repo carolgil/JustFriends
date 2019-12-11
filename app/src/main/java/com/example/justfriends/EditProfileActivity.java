@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,6 +24,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
     TextView textViewEPName, textViewEPAge, textViewEPGender, textViewEPHometown, textViewEPOccupation, textViewEPInterests;
     EditText editTextEPName, editTextEPAge, editTextEPEducation, editTextEPHometown, editTextEPOccupation;
     Button buttonUpdateProfile;
+    Spinner spinnerEPInterest1, spinnerEPInterest2, spinnerEPGender;
     FirebaseAuth mAuth = FirebaseAuth.getInstance();
     FirebaseUser user;
 
@@ -44,6 +46,10 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         editTextEPHometown = findViewById(R.id.editTextEPHometown);
         editTextEPOccupation = findViewById(R.id.editTextEPOccupation);
         buttonUpdateProfile = findViewById(R.id.buttonUpdateProfile);
+        spinnerEPGender = findViewById(R.id.spinnerEPGender);
+        spinnerEPInterest1 = findViewById(R.id.spinnerEPInterest1);
+        spinnerEPInterest2 = findViewById(R.id.spinnerEPInterest2);
+
 
         user = mAuth.getCurrentUser();
         String userID = user.getEmail().toString();
