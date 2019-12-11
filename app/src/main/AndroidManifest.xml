@@ -13,7 +13,6 @@
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".CreateEventActivity" />
         <activity android:name=".CreateProfileActivity" />
-        <activity android:name=".ProfileFavoritesActivity" />
         <activity android:name=".EditProfileActivity" />
         <activity android:name=".ProfileEventsActivity" />
         <activity android:name=".ProfileInfoActivity" />

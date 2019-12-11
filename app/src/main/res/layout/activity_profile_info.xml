@@ -4,18 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".ProfileInfoActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:state_checked="true"
+        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/nav_items"
-        app:labelVisibilityMode="labeled"
-        android:state_checked="true"/>
+        app:menu="@menu/nav_items" />
 
     <TextView
         android:id="@+id/textViewInterestsPI"
@@ -23,7 +24,10 @@
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Interests"
+        android:textColor="#050000"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +39,9 @@
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOccupationPIOutput" />
@@ -46,7 +52,9 @@
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="31dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:hint="MM/DD/YYYY"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -58,7 +66,10 @@
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Education"
+        android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOccupationPI" />
 
@@ -68,7 +79,10 @@
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Date of Birth"
+        android:textColor="#020000"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGenderPI" />
 
@@ -79,7 +93,10 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Occupation"
+        android:textColor="#0C0000"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/textViewOccupationPIOutput"
         app:layout_constraintHorizontal_bias="0.083"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +108,9 @@
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="31dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewHometownPIOutput" />
@@ -102,7 +121,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
         android:layout_marginTop="44dp"
+        android:background="#4C8569"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Events"
+        android:textColor="#FFFFFF"
         app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
 
@@ -113,24 +135,26 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="11dp"
-        android:background="#A7A7A7"
+        android:background="#13462D"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Info"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
 
     <TextView
         android:id="@+id/textViewNamePIOutput"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="172dp"
+        android:layout_height="35dp"
         android:layout_marginStart="15dp"
         android:layout_marginTop="28dp"
-        android:layout_marginEnd="204dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:hint="Name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        android:textColor="#070000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -138,25 +162,31 @@
         android:id="@+id/buttonEditProfilePI"
         android:layout_width="66dp"
         android:layout_height="37dp"
-        android:layout_marginStart="2dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="136dp"
+        android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="edit"
+        android:textColor="#000000"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewNamePIOutput"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSignoutPI"
         android:layout_width="116dp"
         android:layout_height="40dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:background="#020000"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Sign out"
+        android:textColor="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonEditProfilePI"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInterest1Output" />
 
     <TextView
         android:id="@+id/textViewGenderPIOutput"
@@ -164,7 +194,9 @@
         android:layout_height="33dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
@@ -176,7 +208,11 @@
         android:layout_marginStart="25dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Gender"
+        android:textAlignment="viewStart"
+        android:textColor="#050000"
+        android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/textViewGenderPIOutput"
         app:layout_constraintHorizontal_bias="0.052"
         app:layout_constraintStart_toStartOf="parent"
@@ -186,8 +222,10 @@
         android:id="@+id/textViewInterest1Output"
         android:layout_width="100dp"
         android:layout_height="33dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/rubik_mono_one"
         app:layout_constraintStart_toEndOf="@+id/textViewInterestsPI"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
 
@@ -197,6 +235,8 @@
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="32dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/rubik_mono_one"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
 
@@ -206,7 +246,10 @@
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Hometown"
+        android:textColor="#070000"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewDOBPI" />
 
@@ -216,6 +259,8 @@
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="31dp"
+        android:background="#FFFFFF"
+        android:fontFamily="@font/rubik_mono_one"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAgePIOutput" />
 
