@@ -11,7 +11,6 @@ import android.widget.TextView;
 public class EventDetailsActivity extends AppCompatActivity {
 
     TextView textViewEDEventName, textViewEDDate, textViewEDTime, textViewEDLocation, textViewEDDetails, textViewEDDetailsBox, textViewEDNumGoing, textViewEDInterests, textViewEDInterest1, textViewEDInterest2, textViewEDInterest3;
-    CheckBox checkBoxEDFavorite;
     Switch switchEDGoing;
 
     @Override
