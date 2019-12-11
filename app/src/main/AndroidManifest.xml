@@ -12,7 +12,6 @@
         <activity android:name=".FeedActivity" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".CreateEventActivity" />
-        <activity android:name=".ChatActivity" />
         <activity android:name=".CreateProfileActivity" />
         <activity android:name=".ProfileFavoritesActivity" />
         <activity android:name=".EditProfileActivity" />

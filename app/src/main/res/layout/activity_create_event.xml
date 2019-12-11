@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".CreateEventActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/nav_items"
         android:state_checked="true"
         app:labelVisibilityMode="labeled"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/nav_items" />
 
     <TextView
         android:id="@+id/textViewGender"
@@ -24,6 +24,7 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="119dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Create Event"
         android:textAllCaps="true"
         android:textSize="21sp"
@@ -37,9 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="65dp"
-        android:layout_marginEnd="292dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Event Name"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="10sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,10 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="316dp"
         android:text="Location"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCreateEventName" />
 
@@ -62,10 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="277dp"
         android:text="Date and Time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCreateEventLocation" />
 
@@ -75,10 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="296dp"
         android:text="Description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCreateEventDateTime" />
 
@@ -88,10 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="65dp"
-        android:layout_marginEnd="335dp"
         android:text="Tags"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCreateEventDescription" />
 
@@ -101,9 +90,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="299dp"
         android:text="Event Cap"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewCreateEventTags" />
 
@@ -123,24 +110,25 @@
         android:id="@+id/editTextCreateEventName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="52dp"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:hint="Type Event Name Here..."
         android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/textViewCreateEventName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGender" />
 
     <EditText
         android:id="@+id/editTextCreateEventLocation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="27dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="90dp"
         android:ems="10"
         android:hint="Enter Location Here..."
         android:inputType="textPostalAddress"
-        app:layout_constraintStart_toEndOf="@+id/textViewCreateEventLocation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventName" />
 
     <EditText
@@ -148,7 +136,7 @@
         android:layout_width="126dp"
         android:layout_height="44dp"
         android:layout_marginStart="7dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:ems="10"
         android:hint="e.g. 12/6/19"
         android:inputType="date"
@@ -159,10 +147,12 @@
         android:id="@+id/editTextCreateEventTime"
         android:layout_width="118dp"
         android:layout_height="44dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="52dp"
         android:ems="10"
         android:hint="e.g. 3:00 PM"
         android:inputType="time"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/editTextCreateEventDate"
         app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventLocation" />
 
@@ -170,34 +160,34 @@
         android:id="@+id/editTextCreateEventDescription"
         android:layout_width="270dp"
         android:layout_height="68dp"
-        android:layout_marginStart="17dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="36dp"
         android:ems="10"
         android:gravity="start|top"
         android:hint="Enter Event Description Here..."
         android:inputType="textMultiLine"
-        app:layout_constraintStart_toEndOf="@+id/textViewCreateEventDescription"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventDate" />
 
     <EditText
         android:id="@+id/editTextCreateEventCap"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="90dp"
         android:ems="10"
         android:hint="e.g. 15"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/textViewCreateEventCap"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEventTag" />
 
     <Spinner
         android:id="@+id/spinnerEventTag"
         android:layout_width="223dp"
         android:layout_height="39dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintStart_toEndOf="@+id/textViewCreateEventTags"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -76,8 +76,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        TextView View_Feed_Name, View_Feed_Date, View_Feed_Time, View_Feed_Location,
-                View_Feed_Att, View_Event_Filter, edit_Interest_Tag, View_Feed_Creator;
+        TextView View_Feed_Name, View_Feed_Date, View_Feed_Time, View_Feed_Location, View_Feed_Att, View_Event_Filter, edit_Interest_Tag, View_Feed_Creator;
         Button Event_Button_Favourite, Event_Details;
         RelativeLayout Feed_Relative;
         public LinearLayout LinearLayout;
