@@ -4,27 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".EditProfileActivity">
 
     <Spinner
         android:id="@+id/spinnerEPInterest1"
         android:layout_width="167dp"
         android:layout_height="28dp"
-        android:layout_marginStart="47dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPInterests"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
 
     <TextView
         android:id="@+id/textViewEPEditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="175dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="167dp"
+        android:layout_marginEnd="50dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Edit Profile"
+        android:textColor="#000000"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,6 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="48dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -44,6 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Age"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPName" />
@@ -54,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Gender"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPAge" />
@@ -64,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Education"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPGender" />
@@ -74,6 +82,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Hometown"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPEducation" />
@@ -84,6 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Occupation"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPHometown" />
@@ -94,6 +104,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="55dp"
         android:layout_marginTop="25dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Interests"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPOccupation" />
@@ -102,68 +113,72 @@
         android:id="@+id/editTextEPName"
         android:layout_width="170dp"
         android:layout_height="41dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPEditProfile" />
 
     <EditText
         android:id="@+id/editTextEPEducation"
         android:layout_width="166dp"
         android:layout_height="45dp"
-        android:layout_marginStart="38dp"
         android:layout_marginTop="37dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPEducation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
 
     <EditText
         android:id="@+id/editTextEPHometown"
         android:layout_width="191dp"
         android:layout_height="41dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPHometown"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPEducation" />
 
     <EditText
         android:id="@+id/editTextEPOccupation"
         android:layout_width="194dp"
         android:layout_height="38dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPOccupation"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPHometown" />
 
     <EditText
         android:id="@+id/editTextEPAge"
         android:layout_width="92dp"
         android:layout_height="41dp"
-        android:layout_marginStart="79dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPAge"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPName" />
 
     <Button
         android:id="@+id/buttonUpdateProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="90dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="50dp"
+        android:background="#F0BE9B9B"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Update Profile"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
 
@@ -171,15 +186,16 @@
         android:id="@+id/spinnerEPGender"
         android:layout_width="166dp"
         android:layout_height="25dp"
-        android:layout_marginStart="56dp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPGender"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
 
     <Spinner
         android:id="@+id/spinnerEPInterest2"
         android:layout_width="135dp"
         android:layout_height="32dp"
-        android:layout_marginStart="47dp"
-        app:layout_constraintStart_toEndOf="@+id/textViewEPInterests"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEPInterest1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
