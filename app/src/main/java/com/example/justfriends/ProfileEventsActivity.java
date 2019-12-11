@@ -29,7 +29,7 @@ import java.util.ArrayList;
 
 public class ProfileEventsActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
 
-    Button buttonEventsPE, buttonInfoPE, buttonEditProfilePE, buttonSignoutPE;
+    Button buttonEventsPE, buttonInfoPE, buttonSignoutPE;
     private BottomNavigationView mMainv;
     private ArrayList<Event> Events;
     private RecyclerView recycler_view; //recycler view variable
@@ -44,12 +44,10 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
 
         buttonEventsPE = findViewById(R.id.buttonEventsPE);
         buttonInfoPE = findViewById(R.id.buttonInfoPE);
-        buttonEditProfilePE = findViewById(R.id.buttonEditProfilePE);
         buttonSignoutPE = findViewById(R.id.buttonSignoutPE);
 
         buttonEventsPE.setOnClickListener(this);
         buttonInfoPE.setOnClickListener(this);
-        buttonEditProfilePE.setOnClickListener(this);
         buttonSignoutPE.setOnClickListener(this);
 
         Events = new ArrayList<Event>();

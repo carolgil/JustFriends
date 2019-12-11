@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".ProfileEventsActivity">
 
 
@@ -27,6 +28,7 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="70dp"
         android:background="#A7A7A7"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Events"
         app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
@@ -38,22 +40,11 @@
         android:layout_marginStart="119dp"
         android:layout_marginTop="75dp"
         android:layout_marginEnd="11dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Info"
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
-
-    <Button
-        android:id="@+id/buttonEditProfilePE"
-        android:layout_width="66dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="136dp"
-        android:text="edit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textViewNamePIOutput"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSignoutPE"
@@ -62,7 +53,11 @@
         android:layout_marginStart="250dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="#F0000000"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Sign out"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonEditProfilePI"
         app:layout_constraintTop_toTopOf="parent" />
@@ -71,13 +66,15 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="137dp"
-        android:layout_marginTop="170dp" />
+        android:layout_marginTop="170dp"
+        android:background="#FFFFFFFF" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Events Created" />
 
     <TextView
@@ -85,10 +82,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Events Going" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="145dp"
-        android:layout_marginTop="350dp" />
+        android:layout_marginTop="350dp"
+        android:background="#FFFFFF" />
 </RelativeLayout>
