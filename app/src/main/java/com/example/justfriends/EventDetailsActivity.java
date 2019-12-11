@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class EventDetailsActivity extends AppCompatActivity {
 
-    TextView textViewEDEventName, textViewEDDate, textViewEDTime, textViewEDLocation, textViewEDDetails, textViewEDDetailsBox, textViewEDNumGoing, textViewEDInterests, textViewEDInterest1, textViewEDInterest2, textViewEDInterest3;
+    TextView textViewEDEventName, textViewEDDate, textViewEDTime, textViewEDLocation, textViewEDDetails, textViewEDDetailsBox, textViewEDInterest1, textViewEDInterest3;
     Switch switchEDGoing;
 
     @Override
@@ -26,7 +26,6 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewEDLocation = findViewById(R.id.textViewEDLocation);
         textViewEDDetails = findViewById(R.id.textViewEDDetails);
         textViewEDDetailsBox = findViewById(R.id.textViewEDDetailsBox);
-        textViewEDNumGoing = findViewById(R.id.textViewEDNumGoing);
         textViewEDInterest1 = findViewById(R.id.textViewEDInterest1);
         textViewEDInterest3 = findViewById(R.id.textViewEDInterest3);
 
