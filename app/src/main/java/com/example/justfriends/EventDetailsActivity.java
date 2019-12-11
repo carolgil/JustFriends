@@ -4,13 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.TextView;
 
-public class EventDetailsActivity extends AppCompatActivity {
+public class EventDetailsActivity extends AppCompatActivity implements View.OnClickListener {
 
-    TextView textViewEDEventName, textViewEDDate, textViewEDTime, textViewEDLocation, textViewEDDetails, textViewEDDetailsBox, textViewEDInterest1, textViewEDInterest3;
+    TextView textViewEDEventCreator, textViewEDEventName, textViewEDDate, textViewEDTime, textViewEDLocation, textViewEDDetails, textViewEDDetailsBox, textViewEDInterest1;
     Switch switchEDGoing;
 
     @Override
@@ -27,7 +28,9 @@ public class EventDetailsActivity extends AppCompatActivity {
         textViewEDDetails = findViewById(R.id.textViewEDDetails);
         textViewEDDetailsBox = findViewById(R.id.textViewEDDetailsBox);
         textViewEDInterest1 = findViewById(R.id.textViewEDInterest1);
-        textViewEDInterest3 = findViewById(R.id.textViewEDInterest3);
+        textViewEDEventCreator = findViewById(R.id.textViewEDEventCreator);
+
+        textViewEDEventCreator.setOnClickListener(this);
 
         textViewEDEventName.setText(getIntent().getExtras().getString("event name"));
         textViewEDDate.setText(getIntent().getExtras().getString("event date"));
@@ -42,6 +45,15 @@ public class EventDetailsActivity extends AppCompatActivity {
 
 
     }
-    
 
+
+    @Override
+    public void onClick(View view) {
+        if (view == textViewEDEventCreator){
+
+            Intent otherIntent = new Intent(EventDetailsActivity.this, OtherProfileActivity.class);
+            startActivity(otherIntent);
+        }
+
+    }
 }

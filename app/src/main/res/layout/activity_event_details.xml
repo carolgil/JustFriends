@@ -112,15 +112,4 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewEDInterest3"
-        android:layout_width="129dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="96dp"
-        android:fontFamily="@font/rubik_mono_one"
-        android:text="Interest 3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEDInterest1" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
