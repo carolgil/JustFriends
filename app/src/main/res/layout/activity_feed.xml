@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#77F4F7D5"
     tools:context=".FeedActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,8 @@
         android:layout_above="@+id/main_nav"
         android:layout_alignParentTop="true"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="94dp" />>
+        android:layout_marginBottom="94dp"
+        android:background="#FFFFFF" />>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
@@ -26,7 +28,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/nav_items" >
+        app:menu="@menu/nav_items">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
@@ -36,7 +38,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/rubik_mono_one"
         android:text="Welcome,"
+        android:textColor="#030000"
         android:textSize="24sp" />
 
     <TextView
