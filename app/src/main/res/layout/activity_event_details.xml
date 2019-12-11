@@ -15,7 +15,7 @@
         android:layout_marginTop="48dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Event Name"
-        android:textSize="30sp"
+        android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
