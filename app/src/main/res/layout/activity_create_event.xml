@@ -164,13 +164,14 @@
         android:layout_width="118dp"
         android:layout_height="44dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp"
         android:ems="10"
         android:fontFamily="@font/rubik_mono_one"
         android:hint="e.g. 3:00 PM"
         android:inputType="time"
         android:textSize="10sp"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventLocation"
-        tools:layout_editor_absoluteX="267dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextCreateEventLocation" />
 
     <EditText
         android:id="@+id/editTextCreateEventDescription"
