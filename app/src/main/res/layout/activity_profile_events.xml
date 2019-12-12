@@ -8,6 +8,16 @@
     tools:context=".ProfileEventsActivity">
 
 
+    <ImageView
+        android:id="@+id/imageViewPEProfilePic"
+        android:layout_width="108dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[5]" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
         android:layout_width="wrap_content"
@@ -51,18 +61,17 @@
 
     <Button
         android:id="@+id/buttonSignoutPE"
-        android:layout_width="116dp"
-        android:layout_height="40dp"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
         android:layout_marginStart="250dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:background="#F0000000"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Sign out"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonEditProfilePI"
+        app:layout_constraintStart_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
