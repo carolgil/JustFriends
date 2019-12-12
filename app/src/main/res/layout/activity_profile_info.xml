@@ -7,6 +7,16 @@
     android:background="#77F4F7D5"
     tools:context=".ProfileInfoActivity">
 
+    <ImageView
+        android:id="@+id/imageViewPIProfilePic"
+        android:layout_width="108dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[5]" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/main_nav"
         android:layout_width="wrap_content"
@@ -119,43 +129,41 @@
         android:id="@+id/buttonEventsPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="11dp"
         android:layout_marginTop="44dp"
+        android:layout_marginEnd="56dp"
         android:background="#4C8569"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Events"
         android:textColor="#FFFFFF"
-        app:layout_constraintStart_toEndOf="@+id/buttonInfoPI"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
 
     <Button
         android:id="@+id/buttonInfoPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="119dp"
         android:layout_marginTop="44dp"
-        android:layout_marginEnd="11dp"
+        android:layout_marginEnd="17dp"
         android:background="#13462D"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Info"
         android:textColor="#FFFFFF"
         app:layout_constraintEnd_toStartOf="@+id/buttonEventsPI"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewNamePIOutput" />
 
     <TextView
         android:id="@+id/textViewNamePIOutput"
         android:layout_width="172dp"
         android:layout_height="35dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="16dp"
         android:background="#FFFFFF"
         android:ems="10"
         android:fontFamily="@font/rubik_mono_one"
         android:hint="Name"
         android:inputType="textPersonName"
         android:textColor="#070000"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPIProfilePic"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -192,7 +200,7 @@
         android:id="@+id/textViewGenderPIOutput"
         android:layout_width="218dp"
         android:layout_height="33dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="32dp"
         android:background="#FFFFFF"
         android:ems="10"
@@ -206,7 +214,7 @@
         android:layout_width="103dp"
         android:layout_height="33dp"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="25dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Gender"
@@ -214,7 +222,7 @@
         android:textColor="#050000"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/textViewGenderPIOutput"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonInfoPI" />
 

@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Switch;
 
@@ -22,6 +23,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
     EditText editTextName, editTextAge, editTextEducation, editTextHometown, editTextOccupation;
     Spinner spinnerGender, spinnerInterest1, spinnerInterest2;
     Button buttonCreateProfile;
+    ImageView imageViewCPProfilePic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class CreateProfileActivity extends AppCompatActivity implements View.OnC
         spinnerInterest1 = findViewById(R.id.spinnerInterest1);
         spinnerInterest2 = findViewById(R.id.spinnerInterest2);
         buttonCreateProfile = findViewById(R.id.buttonCreateProfile);
+        imageViewCPProfilePic = findViewById(R.id.imageViewCPProfilePic);
 
         buttonCreateProfile.setOnClickListener(this);
         spinnerGender.setOnItemSelectedListener(this);
