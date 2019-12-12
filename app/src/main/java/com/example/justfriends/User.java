@@ -6,6 +6,7 @@ public class User {
 
     public String email;
     public String name;
+   // public String picture;
     public int age;
     public String gender;
     public String education;
@@ -28,6 +29,7 @@ public class User {
         this.occupation = occupation;
         this.interest1 = interest1;
         this.interest2 = interest2;
+        //this.picture = picture;
     }
 
 }

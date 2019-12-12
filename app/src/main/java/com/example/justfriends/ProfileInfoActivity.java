@@ -33,6 +33,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
 
     TextView textViewInterestPI, textViewEducationPI, textViewOccupationPI, textViewGenderPI, textViewEducationPIOutput, textViewOccupationPIOutput, textViewAgePIOutput, textViewNamePIOutput, textViewGenderPIOutput, textViewHometownPI, textViewHometownPIOutput, textViewInterest1Output, textViewInterest2Output;
     Button buttonEventsPI, buttonEditProfilePI, buttonInfoPI, buttonSignoutPI;
+    ImageView imageViewCPProfilePic;
 
 
     @Override
@@ -55,6 +56,8 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
         textViewEducationPI = findViewById(R.id.textViewEducationPI);
         textViewOccupationPI = findViewById(R.id.textViewOccupationPI);
         textViewGenderPI = findViewById(R.id.textViewGenderPI);
+
+        imageViewCPProfilePic = findViewById(R.id.imageViewCPProfilePic);
 
         //YK: Adding Hometown
         textViewHometownPIOutput = findViewById(R.id.textViewHometownPIOutput);
@@ -106,6 +109,7 @@ public class ProfileInfoActivity extends AppCompatActivity implements View.OnCli
                 String userOccupation = findUser.occupation;
                 String userInterest1 = findUser.interest1;
                 String userInterest2 = findUser.interest2;
+              //  String userPicture = findUser.picture;
 
                 //YK: Populate textViews
                 textViewGenderPIOutput.setText(userGender);
