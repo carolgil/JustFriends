@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "337862702569-leqqgvond18lsjdsolkm21aqsjstmcoq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.justfriends",
+            "certificate_hash": "d5ca379997b2e0c7f341068076fc8b19107f2226"
+          }
+        },
+        {
           "client_id": "337862702569-h3d05nj2i2eu0hi272m9r3g1kqvjpefm.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
