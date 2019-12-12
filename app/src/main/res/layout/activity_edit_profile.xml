@@ -7,12 +7,23 @@
     android:background="#77F4F7D5"
     tools:context=".EditProfileActivity">
 
+    <ImageView
+        android:id="@+id/imageViewEPProfilePic"
+        android:layout_width="108dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[5]" />
+
     <Spinner
         android:id="@+id/spinnerEPInterest1"
-        android:layout_width="167dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="181dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
+        android:background="#FFFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
 
@@ -20,70 +31,72 @@
         android:id="@+id/textViewEPEditProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="50dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Edit Profile"
         android:textColor="#000000"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.62"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewEPName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="230dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Name"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEPEditProfile" />
 
     <TextView
         android:id="@+id/textViewEPAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="21dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Age"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEPName" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewEPProfilePic" />
 
     <TextView
         android:id="@+id/textViewEPGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="139dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Gender"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEPAge" />
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEPName" />
 
     <TextView
         android:id="@+id/textViewEPEducation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Education"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEPGender" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
 
     <TextView
         android:id="@+id/textViewEPHometown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Hometown"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPEducation" />
 
@@ -91,10 +104,11 @@
         android:id="@+id/textViewEPOccupation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Occupation"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPHometown" />
 
@@ -102,43 +116,52 @@
         android:id="@+id/textViewEPInterests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Interests"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewEPOccupation" />
 
     <EditText
         android:id="@+id/editTextEPName"
-        android:layout_width="170dp"
+        android:layout_width="181dp"
         android:layout_height="41dp"
-        android:layout_marginEnd="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="97dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
+        android:textColor="#000000"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEPEditProfile" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEPName" />
 
     <EditText
         android:id="@+id/editTextEPEducation"
-        android:layout_width="166dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="30dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
-
-    <EditText
-        android:id="@+id/editTextEPHometown"
-        android:layout_width="191dp"
+        android:layout_width="181dp"
         android:layout_height="41dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
+        android:background="#FFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
+        android:inputType="textPersonName"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEPGender" />
+
+    <EditText
+        android:id="@+id/editTextEPHometown"
+        android:layout_width="181dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="30dp"
+        android:background="#FFFFFFFF"
+        android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -146,11 +169,13 @@
 
     <EditText
         android:id="@+id/editTextEPOccupation"
-        android:layout_width="194dp"
-        android:layout_height="38dp"
+        android:layout_width="181dp"
+        android:layout_height="41dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
+        android:background="#FFFFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -160,42 +185,47 @@
         android:id="@+id/editTextEPAge"
         android:layout_width="92dp"
         android:layout_height="41dp"
+        android:layout_marginStart="25dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="30dp"
+        android:background="#FFFFFFFF"
         android:ems="10"
+        android:fontFamily="@font/rubik_mono_one"
         android:inputType="textPersonName"
         android:textSize="12sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEPName" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEPAge" />
 
     <Button
         android:id="@+id/buttonUpdateProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
         android:layout_marginEnd="50dp"
         android:background="#F0BE9B9B"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Update Profile"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEPOccupation" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEPInterest2" />
 
     <Spinner
         android:id="@+id/spinnerEPGender"
-        android:layout_width="166dp"
-        android:layout_height="25dp"
+        android:layout_width="181dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="9dp"
         android:layout_marginEnd="30dp"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEPAge" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEPGender" />
 
     <Spinner
         android:id="@+id/spinnerEPInterest2"
-        android:layout_width="135dp"
-        android:layout_height="32dp"
+        android:layout_width="181dp"
+        android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="30dp"
+        android:background="#FFFFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEPInterest1" />
 </androidx.constraintlayout.widget.ConstraintLayout>
