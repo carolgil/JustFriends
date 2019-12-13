@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GlideModuleActivity" />
+        <activity android:name=".OtherProfileActivity" />
         <activity android:name=".FeedActivity" />
         <activity android:name=".EventDetailsActivity" />
         <activity android:name=".CreateEventActivity" />

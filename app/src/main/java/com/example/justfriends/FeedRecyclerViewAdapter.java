@@ -56,6 +56,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
                 String eventTag = events.get(position).eventInterest;
                 String eventDate = events.get(position).eventDate;
                 String eventDetails = events.get(position).eventDescription;
+                String evenCreator = events.get(position).eventCreator;
 
 
                 Intent intent = new Intent(context, EventDetailsActivity.class);
@@ -65,6 +66,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
                 intent.putExtra("event location",eventLocation);
                 intent.putExtra("event tag",eventTag);
                 intent.putExtra("event details", eventDetails);
+                intent.putExtra("event creator", evenCreator);
                 context.startActivity(intent);
             }
         });

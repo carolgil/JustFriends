@@ -36,7 +36,7 @@
         android:id="@+id/textViewWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Welcome,"
@@ -48,8 +48,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:layout_toRightOf="@id/textViewWelcome"
+        android:fontFamily="@font/rubik_mono_one"
+        android:textColor="#030000"
         android:textSize="24sp" />
 
 
