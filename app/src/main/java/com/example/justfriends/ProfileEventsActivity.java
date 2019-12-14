@@ -24,6 +24,7 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -35,6 +36,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
     private ArrayList<Event> Events;
     private ArrayList<Event> EventsGoing;
     private RecyclerView recycler_view; //recycler view variable
+    private RecyclerView recycler_view_going;
     private RecyclerView.LayoutManager layoutManager; //layout manager for recycler view, need this for a recyclerview
 
     @Override
@@ -124,6 +126,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
     }
 
     public void getEventsGoing() {
+
         EventsGoing = new ArrayList<Event>();
 
         //Pulling all the info + Reading from the database
@@ -131,10 +134,10 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         final DatabaseReference myRef = database.getReference("Events");
 
         //Pulling user email
-        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+        final String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
 
         //Read from the database
-        myRef.orderByChild("going").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+        myRef.orderByChild("going").addChildEventListener(new ChildEventListener() {
 
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
@@ -150,16 +153,19 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
                 String eventTag = findEvent.eventInterest;
                 ArrayList<String> going = findEvent.going;
 
+                for(int i=0; i< going.size(); i++){
+                    if (userEmail.equals(going.get(i))) {
+                        Event e2 = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag, going);
 
-                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag, going);
+                        EventsGoing.add(e2);
+                        recycler_view_going = findViewById(R.id.recycler_view_going); //Link recyclerview variable to xml
+                        RecyclerViewGoing adapter_going = new RecyclerViewGoing(EventsGoing, ProfileEventsActivity.this); //Linking the adapter to recyclerView,
+                        //check out the RecyclerViewAdapter (this is the hard part)
+                        recycler_view_going.setAdapter(adapter_going);
+                        recycler_view_going.setLayoutManager(new LinearLayoutManager(ProfileEventsActivity.this)); //Setting the layout manager, commonly used is linear
 
-                Events.add(e);
-
-                recycler_view = findViewById(R.id.recycler_view); //Link recyclerview variable to xml
-                RecyclerViewAdapter adapter = new RecyclerViewAdapter(Events, ProfileEventsActivity.this); //Linking the adapter to recyclerView,
-                //check out the RecyclerViewAdapter (this is the hard part)
-                recycler_view.setAdapter(adapter);
-                recycler_view.setLayoutManager(new LinearLayoutManager(ProfileEventsActivity.this)); //Setting the layout manager, commonly used is linear
+                    }
+                }
 
             }
 
@@ -185,8 +191,6 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
 
 
         });
-
-
 
 
     }
