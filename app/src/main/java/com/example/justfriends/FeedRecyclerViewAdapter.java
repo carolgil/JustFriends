@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +47,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         holder.edit_Interest_Tag.setText(events.get(position).eventInterest);
         holder.View_Feed_Creator.setText(events.get(position).eventCreator);
 
-        holder.LinearLayout.setOnClickListener(new View.OnClickListener() {
+        holder.Button_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Context context = view.getContext();
@@ -82,7 +83,8 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         Button Event_Button_Favourite, Event_Details;
         RelativeLayout Feed_Relative;
         public LinearLayout LinearLayout;
-
+        Switch switchEDGoing;
+        Button Button_details;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
@@ -94,6 +96,8 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
             LinearLayout = itemView.findViewById(R.id.LinearLayout);
             edit_Interest_Tag = itemView.findViewById(R.id.edit_Interest_Tag);
             View_Feed_Creator = itemView.findViewById(R.id.View_Feed_Creator);
+            switchEDGoing = itemView.findViewById(R.id.switchEDGoing);
+            Button_details = itemView.findViewById(R.id.Button_details);
 
         }
 

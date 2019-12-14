@@ -4,8 +4,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -75,6 +77,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             textViewPElocation = itemView.findViewById(R.id.textViewPElocation);
             textViewPEInterestTag = itemView.findViewById(R.id.textViewPEInterestTag);
             parent_layout = itemView.findViewById(R.id.parent_layout);
+
         }
     }
 
