@@ -25,6 +25,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ProfileEventsActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener {
@@ -32,6 +33,7 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
     Button buttonEventsPE, buttonInfoPE, buttonSignoutPE;
     private BottomNavigationView mMainv;
     private ArrayList<Event> Events;
+    private ArrayList<Event> EventsGoing;
     private RecyclerView recycler_view; //recycler view variable
     private RecyclerView.LayoutManager layoutManager; //layout manager for recycler view, need this for a recyclerview
 
@@ -49,6 +51,13 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         buttonEventsPE.setOnClickListener(this);
         buttonInfoPE.setOnClickListener(this);
         buttonSignoutPE.setOnClickListener(this);
+
+        getEventsCreated();
+        getEventsGoing();
+
+    }
+
+    public void getEventsCreated(){
 
         Events = new ArrayList<Event>();
 
@@ -74,9 +83,10 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
                 String eventCreator = findEvent.eventCreator;
                 Integer eventCap = findEvent.eventCap;
                 String eventTag = findEvent.eventInterest;
+                ArrayList<String> going = findEvent.going;
 
 
-                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag);
+                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag, going);
 
                 Events.add(e);
 
@@ -112,6 +122,77 @@ public class ProfileEventsActivity extends AppCompatActivity implements View.OnC
         });
 
     }
+
+    public void getEventsGoing() {
+        EventsGoing = new ArrayList<Event>();
+
+        //Pulling all the info + Reading from the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        final DatabaseReference myRef = database.getReference("Events");
+
+        //Pulling user email
+        String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+        //Read from the database
+        myRef.orderByChild("going").equalTo(userEmail).addChildEventListener(new ChildEventListener() {
+
+            @Override
+            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                Event findEvent = dataSnapshot.getValue(Event.class);
+                String eventName = findEvent.eventName;
+                String eventLocation = findEvent.eventLocation;
+                String eventDate = findEvent.eventDate;
+                String eventTime = findEvent.eventTime;
+                String eventDescription = findEvent.eventDescription;
+                String eventCreator = findEvent.eventCreator;
+                Integer eventCap = findEvent.eventCap;
+                String eventTag = findEvent.eventInterest;
+                ArrayList<String> going = findEvent.going;
+
+
+                Event e = new Event(eventName, eventLocation, eventDate, eventTime, eventDescription, eventCreator, eventCap, eventTag, going);
+
+                Events.add(e);
+
+                recycler_view = findViewById(R.id.recycler_view); //Link recyclerview variable to xml
+                RecyclerViewAdapter adapter = new RecyclerViewAdapter(Events, ProfileEventsActivity.this); //Linking the adapter to recyclerView,
+                //check out the RecyclerViewAdapter (this is the hard part)
+                recycler_view.setAdapter(adapter);
+                recycler_view.setLayoutManager(new LinearLayoutManager(ProfileEventsActivity.this)); //Setting the layout manager, commonly used is linear
+
+            }
+
+            @Override
+            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+            }
+
+            @Override
+            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+
+
+        });
+
+
+
+
+    }
+
+
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {

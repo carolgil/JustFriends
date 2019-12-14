@@ -19,6 +19,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+
 public class CreateEventActivity extends AppCompatActivity implements View.OnClickListener, BottomNavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemSelectedListener {
     EditText editTextCreateEventName, editTextCreateEventLocation, editTextCreateEventDate, editTextCreateEventTime,
             editTextCreateEventDescription, editTextCreateEventCap;
@@ -70,9 +72,10 @@ public class CreateEventActivity extends AppCompatActivity implements View.OnCli
             String description = editTextCreateEventDescription.getText().toString();
             int cap = Integer.parseInt(editTextCreateEventCap.getText().toString());
             String interestTag = spinnerEventTag.getSelectedItem().toString();
+            ArrayList<String> going = new ArrayList<String>();
+            going.add("");
 
-
-            Event myEvent  = new Event(name, location, date, time, description, creator, cap, interestTag);
+            Event myEvent  = new Event(name, location, date, time, description, creator, cap, interestTag, going);
             myRef2.push().setValue(myEvent);
 
             Intent feedIntent = new Intent(CreateEventActivity.this, FeedActivity.class);

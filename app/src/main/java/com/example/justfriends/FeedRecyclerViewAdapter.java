@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
@@ -13,9 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.ArrayList;
 
@@ -47,6 +54,62 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
         holder.edit_Interest_Tag.setText(events.get(position).eventInterest);
         holder.View_Feed_Creator.setText(events.get(position).eventCreator);
 
+        if (holder.switchEDGoing != null) {
+            holder.switchEDGoing.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if(b) {
+                        //do stuff when Switch is ON
+                        //Pulling all the info + Reading from the database
+                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                        final DatabaseReference myRef = database.getReference("Events");
+
+                        final String userEmail = FirebaseAuth.getInstance().getCurrentUser().getEmail();
+
+                        String name = events.get(position).eventName;
+
+                        myRef.orderByChild("eventName").equalTo(name).addChildEventListener(new ChildEventListener() {
+                            @Override
+                            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                                String findKey = dataSnapshot.getKey();
+                                Event foundEvent = dataSnapshot.getValue(Event.class);
+                                ArrayList<String> going = foundEvent.going;
+                                going.add(userEmail);
+
+                                myRef.child(findKey).child("going").setValue(going);
+
+                            }
+
+                            @Override
+                            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                            }
+
+                            @Override
+                            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+                            }
+
+                            @Override
+                            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                            }
+
+                            @Override
+                            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                            }
+                        });
+                    } else {
+                        //do stuff when Switch if OFF
+                        // do nothing
+                    }
+                }
+            });
+        }
+
+
         holder.Button_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -71,6 +134,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
                 context.startActivity(intent);
             }
         });
+
     }
 
     @Override
@@ -80,7 +144,7 @@ public class FeedRecyclerViewAdapter extends RecyclerView.Adapter<FeedRecyclerVi
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView View_Feed_Name, View_Feed_Date, View_Feed_Time, View_Feed_Location, View_Feed_Att, View_Event_Filter, edit_Interest_Tag, View_Feed_Creator;
-        Button Event_Button_Favourite, Event_Details;
+        Button Event_Details;
         RelativeLayout Feed_Relative;
         public LinearLayout LinearLayout;
         Switch switchEDGoing;

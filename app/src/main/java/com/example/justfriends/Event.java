@@ -1,5 +1,7 @@
 package com.example.justfriends;
 
+import java.util.ArrayList;
+
 public class Event {
 
     public String eventName;
@@ -10,12 +12,13 @@ public class Event {
     public String eventCreator;
     public int eventCap;
     public String eventInterest;
+    public ArrayList<String> going;
 
     public Event(){
 
     }
 
-    public Event(String eventName, String eventLocation, String eventDate, String eventTime, String eventDescription, String eventCreator, int eventCap, String eventInterest){
+    public Event(String eventName, String eventLocation, String eventDate, String eventTime, String eventDescription, String eventCreator, int eventCap, String eventInterest, ArrayList<String> going){
         this.eventName = eventName;
         this.eventLocation = eventLocation;
         this.eventDate = eventDate;
@@ -24,6 +27,7 @@ public class Event {
         this.eventCreator = eventCreator;
         this.eventCap = eventCap;
         this.eventInterest = eventInterest;
+        this.going = going;
     }
 
 }
