@@ -132,7 +132,7 @@
         android:id="@+id/buttonEventsPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="56dp"
         android:background="#4C8569"
         android:fontFamily="@font/rubik_mono_one"
@@ -145,8 +145,8 @@
         android:id="@+id/buttonInfoPI"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
         android:background="#13462D"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Info"
@@ -190,14 +190,12 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="59dp"
         android:background="#020000"
         android:fontFamily="@font/rubik_mono_one"
         android:text="Sign out"
         android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/main_nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewInterest1Output" />
 
@@ -236,15 +234,12 @@
         android:id="@+id/textViewInterest1Output"
         android:layout_width="100dp"
         android:layout_height="33dp"
-        android:layout_marginStart="32dp"
         android:layout_marginTop="20dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="28dp"
         android:background="#FFFFFF"
         android:fontFamily="@font/rubik_mono_one"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonSignoutPI"
         app:layout_constraintEnd_toStartOf="@+id/textViewInterest2Output"
-        app:layout_constraintStart_toEndOf="@+id/textViewInterestsPI"
         app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
 
     <TextView
@@ -252,14 +247,15 @@
         android:layout_width="100dp"
         android:layout_height="33dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginBottom="119dp"
         android:background="#FFFFFF"
         android:fontFamily="@font/rubik_mono_one"
         android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/main_nav"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEducationPIOutput"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/textViewHometownPI"
