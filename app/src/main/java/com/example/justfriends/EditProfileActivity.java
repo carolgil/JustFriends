@@ -136,7 +136,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
         if(v == buttonUpdateProfile){
 
             FirebaseUser user_info = mAuth.getCurrentUser();
-            String current_user = user_info.getEmail().toString();
+            String current_user = user_info.getEmail();
 
             myRef.orderByChild("email").equalTo(current_user).addChildEventListener(new ChildEventListener() {
                 @Override
@@ -153,14 +153,14 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
 
                     Toast.makeText(EditProfileActivity.this, edit_key + user_gender + user_name, Toast.LENGTH_SHORT).show();
 
-//                    myRef.child(edit_key).child("email").setValue(user_name);
-//                    myRef.child(edit_key).child("age").setValue(String.valueOf(user_age));
-//                    myRef.child(edit_key).child("gender").setValue(user_gender);
-//                    myRef.child(edit_key).child("education").setValue(user_education);
-//                    myRef.child(edit_key).child("hometown").setValue(user_hometown);
-//                    myRef.child(edit_key).child("occupation").setValue(user_occupation);
-//                    myRef.child(edit_key).child("interest1").setValue(user_interest1);
-//                    myRef.child(edit_key).child("interest2").setValue(user_interest2);
+                    myRef.child(edit_key).child("name").setValue(user_name);
+                    myRef.child(edit_key).child("age").setValue(user_age);
+                    myRef.child(edit_key).child("gender").setValue(user_gender);
+                    myRef.child(edit_key).child("education").setValue(user_education);
+                    myRef.child(edit_key).child("hometown").setValue(user_hometown);
+                    myRef.child(edit_key).child("occupation").setValue(user_occupation);
+                    myRef.child(edit_key).child("interest1").setValue(user_interest1);
+                    myRef.child(edit_key).child("interest2").setValue(user_interest2);
 
                 }
 
