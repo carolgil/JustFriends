@@ -151,7 +151,7 @@ public class EditProfileActivity extends AppCompatActivity implements View.OnCli
                     String user_interest1 = spinnerEPInterest1.getSelectedItem().toString();
                     String user_interest2 = spinnerEPInterest2.getSelectedItem().toString();
 
-                    Toast.makeText(EditProfileActivity.this, edit_key + user_gender + user_name, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(EditProfileActivity.this, "Profile Updated", Toast.LENGTH_SHORT).show();
 
                     myRef.child(edit_key).child("name").setValue(user_name);
                     myRef.child(edit_key).child("age").setValue(user_age);
